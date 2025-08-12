@@ -44,36 +44,42 @@ ul li {
 /* ===============================
    Common Utility Classes
    =============================== */
-.hospital-btn {
+/* Konika Button Styles */
+.konika-btn {
   display: inline-block;
-  padding: 10px 25px;
-  font-size: 16px;
-  font-weight: 500;
+  padding: 12px 28px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  border-radius: 50px;
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+/* Primary Button */
+.konika-btn-primary {
+  background-color: #ec1c24;
   color: #fff;
-  border: none;
-  display: inline-block;
-  border-radius: 4px;
-  text-align: center;
-  transition: var(--transition);
-  cursor: pointer;
+  border: 2px solid #ec1c24;
 }
-/* primary btn */
-.hospital-btn-primary {
-  background-color: var(--secondary) !important;
-}
-.hospital-btn-primary:hover {
-  background-color: var(--primary) !important;
-}
-/* secondary btn */
-.hospital-btn-secondary {
+
+.konika-btn-primary:hover {
   background-color: transparent;
-  border: 1px solid #fff;
+  color: #ec1c24;
 }
-.hospital-btn-secondary:hover {
-  background-color: var(--secondary) !important;
+
+/* Secondary Button */
+.konika-btn-secondary {
+  background-color: transparent;
+  color: #fff;
+  border: 2px solid #fff;
+}
+
+.konika-btn-secondary:hover {
   background-color: #fff;
-  border: 1px solid var(--secondary);
+  color: #ec1c24;
 }
+
 .section-title h4 {
   color: var(--secondary);
   font-weight: 400;
