@@ -4,7 +4,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
 
 :root {
-  --primary: #4db2ec;
+  --primary: #ec1c24;
   --secondary: #1c353d;
   --background: #ffffff;
   --font-family: "Inter", sans-serif;
@@ -282,6 +282,12 @@ ul li {
   left: 0;
 }
 
+.btn-close {
+  width: 1rem;
+  height: 1em;
+  padding: 10px 20px;
+}
+
 /* Responsive */
 @media (max-width: 767px) {
   .header-bottom .nav {
@@ -351,6 +357,7 @@ ul li {
 /* Mobile menu dropdown toggle (clickable) */
 .mobile-menu ul li {
   position: relative;
+  padding: 5px 10px;
 }
 .mobile-menu ul li > .submenu {
   display: none;
@@ -386,7 +393,262 @@ ul li {
 .mobile-menu ul > li.open > a::after {
   transform: translateY(-50%) rotate(180deg); /* ▲ */
 }
-/* -------------Main Body Section --------------------- */
+/* -------------Slider Section --------------------- */
+.carousel-item img {
+  height: 90vh;
+  min-height: 500px;
+  background-position: center;
+  background-size: cover;
+}
+
+.carousel-caption {
+  max-width: 700px;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    rgba(0, 0, 0, 0.7) 30%,
+    rgba(0, 0, 0, 0.2) 100%
+  );
+  z-index: 1;
+}
+
+.carousel-caption {
+  z-index: 2;
+  max-width: 600px;
+}
+
+.custom-arrow {
+  background: rgba(255, 255, 255, 0.2);
+  border: none;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.custom-arrow:hover {
+  background: rgba(255, 255, 255, 0.5);
+}
+
+.custom-arrow i {
+  font-size: 1.5rem;
+  color: white;
+}
+
+.carousel-control-prev {
+  left: 20px;
+}
+
+.carousel-control-next {
+  right: 20px;
+}
+
+.custom-indicators button {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: #ffc107;
+  border: none;
+  margin: 5px;
+  opacity: 0.5;
+  transition: opacity 0.3s ease;
+}
+
+.custom-indicators .active {
+  opacity: 1;
+}
+
+/* -----------About Section Styles ----------------- */
+/* About Section */
+.about-section {
+  background-color: #f9f9f9;
+  padding: 40px 0;
+}
+
+.about-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #333;
+}
+
+.about-title span {
+  color: #ec1c24;
+}
+
+.about-text {
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.6;
+}
+
+.about-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.about-list li {
+  font-size: 1rem;
+  margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+  color: #444;
+}
+
+.about-list .list-icon {
+  color: var(--secondary) !important;
+  font-size: 1.2rem;
+  margin-right: 10px;
+}
+
+/* Image Wrapper */
+.about-img-wrapper {
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.about-img-wrapper img {
+  width: 100%;
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+.about-img-wrapper:hover img {
+  transform: scale(1.05);
+}
+
+.about-img-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(236, 28, 36, 0.2);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  border-radius: 10px;
+}
+
+.about-img-wrapper:hover .about-img-overlay {
+  opacity: 1;
+}
+
+/* Konika Button (from earlier) */
+/* .konika-btn {
+  display: inline-block;
+  padding: 12px 28px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  border-radius: 50px;
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+.konika-btn-primary {
+  background-color: #ec1c24;
+  color: #fff;
+  border: 2px solid #ec1c24;
+}
+
+.konika-btn-primary:hover {
+  background-color: transparent;
+  color: #ec1c24;
+} */
+
+/* Section Styling */
+.why-choose-us {
+  background: #f9f9f9;
+}
+
+.section-title {
+  font-size: 2.2rem;
+  color: #222;
+}
+
+.section-title span {
+  color: #ec1c24;
+}
+
+/* Feature Cards */
+.feature-card {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feature-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+}
+
+.feature-icon {
+  font-size: 2.8rem;
+  color: #ec1c24;
+}
+
+/* Konika Primary Button */
+.btn-konika-primary {
+  background: #ec1c24;
+  color: #fff;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background 0.3s ease;
+}
+
+.btn-konika-primary:hover {
+  background: #c4161c;
+  color: #fff;
+}
+
+/* Animation (using wow.js or animate.css) */
+.wow {
+  visibility: hidden;
+}
+
+/* Course Card Styles */
+.course-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  color: #222;
+}
+
+.course-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(236, 28, 36, 0.3);
+  text-decoration: none;
+}
+
+.course-card .course-icon {
+  transition: transform 0.3s ease;
+}
+
+.course-card:hover .course-icon {
+  transform: rotate(15deg) scale(1.1);
+}
+
+/* Responsive text-center on small devices */
+@media (max-width: 767.98px) {
+  .course-card {
+    text-align: center !important;
+  }
+}
 
 /* -----------Footer Styles ----------------- */
 .footer {
@@ -407,16 +669,20 @@ ul li {
   list-style: none;
 }
 
+.footer ul li {
+  font-size: 14px;
+  line-height: 2;
+  color: #ccc;
+}
+
 .footer ul li a {
   color: #ccc;
   text-decoration: none;
-  font-size: 14px;
-  line-height: 2;
   transition: all 0.3s ease;
 }
 
 .footer ul li a:hover {
-  color: #00bcd4;
+  color: #ec1c24;
   padding-left: 5px;
 }
 
@@ -428,7 +694,7 @@ ul li {
 }
 
 .footer-logo span {
-  color: #00bcd4;
+  color: #ec1c24;
 }
 
 .social-icons {
@@ -444,7 +710,7 @@ ul li {
 }
 
 .social-icons a:hover {
-  color: #00bcd4;
+  color: #ec1c24;
   transform: scale(1.2);
 }
 
@@ -458,7 +724,7 @@ ul li {
 
 .newsletter button {
   width: 100%;
-  background: #00bcd4;
+  background: #ec1c24;
   color: white;
   border: none;
   padding: 10px;
@@ -467,7 +733,7 @@ ul li {
 }
 
 .newsletter button:hover {
-  background-color: #0097a7;
+  background-color: #b9151b;
 }
 
 .footer-bottom {
@@ -480,7 +746,9 @@ ul li {
 }
 
 @media (max-width: 992px) {
-  .footer .col-md-3 {
+  .footer .col-md-3,
+  .footer .col-md-4,
+  .footer .col-md-2 {
     margin-bottom: 30px;
     text-align: center;
   }

@@ -1,31 +1,3 @@
-// // Mobile menu toggle
-// document.getElementById("menu-toggle").addEventListener("click", () => {
-//   document.getElementById("mobileMenu").classList.add("open");
-// });
-// document.getElementById("closeMenu").addEventListener("click", () => {
-//   document.getElementById("mobileMenu").classList.remove("open");
-// });
-
-// // Mobile dropdown toggle
-// document.querySelectorAll("#mobileMenu > ul > li > a").forEach((link) => {
-//   link.addEventListener("click", function (e) {
-//     const parentLi = this.parentElement;
-//     const hasSubmenu = parentLi.querySelector(".submenu");
-
-//     if (hasSubmenu) {
-//       e.preventDefault();
-//       parentLi.classList.toggle("open");
-//     }
-//   });
-// });
-
-// // Optional: Autocomplete placeholder
-// document.getElementById("searchInput").addEventListener("input", (e) => {
-//   const value = e.target.value;
-//   // Hook to backend search suggestion if needed
-//   console.log("Searching for:", value);
-// });
-
 // Mobile menu toggle
 document.getElementById("menu-toggle").addEventListener("click", () => {
   document.getElementById("mobileMenu").classList.add("open");
