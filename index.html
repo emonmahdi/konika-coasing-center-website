@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Coasing Website</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+
+    <!-- Bootstrap CSS -->
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link href="assets/css/all.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="assets/css/style.css" rel="stylesheet">
+
+    <!-- Favicon (Optional) -->
+    <link rel="icon" href="assets/images/favicon.png" type="image/png">
+
+
+
+</head>
+
+<body>
+
+    <!-- Header -->
+    <!-- Header Top -->
+    <header class="topbar-header text-white">
+        <div class="container">
+            <div class="row align-items-center text-center text-md-start">
+
+                <!-- Left: Social Icons -->
+                <div class="col-12 col-md-4 d-flex justify-content-center justify-content-md-start gap-3">
+                    <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+
+                <!-- Center: Coaching Center Address -->
+                <div class="col-12 col-md-4 text-center">
+                    <span class="fw-bold text-white">Address</span><br>
+                    <small class="text-white">
+                        <i class="fas fa-map-marker-alt me-1"></i> Mymensingh Sadar, Bangladesh
+                    </small>
+                </div>
+
+
+                <!-- Right: Mobile Number -->
+                <div class="col-12 col-md-4 d-flex justify-content-center justify-content-md-end gap-2">
+                    <span><i class="fas fa-phone-alt me-1 text-success"></i> +880 1711-000000</span>
+                </div>
+            </div>
+        </div>
+
+    </header>
+
+    <!-- Bottom Sticky Nav -->
+    <nav class="header-bottom sticky-top shadow-sm bg-white">
+        <div class="container d-flex align-items-center justify-content-between py-2">
+
+            <!-- Logo -->
+            <a href="index.html" class="navbar-brand d-flex align-items-center">
+                <img src="assets/images/konika.jfif" alt="Konika Coaching" height="40" class="me-2">
+            </a>
+
+            <!-- Hamburger for Mobile -->
+            <button class="btn d-md-none" id="menu-toggle">
+                <i class="fas fa-bars fs-5"></i>
+            </button>
+
+            <!-- Main Menu -->
+            <ul class="nav d-none d-md-flex mb-0 fw-semibold">
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link px-3">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="about.html" class="nav-link px-3">About Us</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle px-3" data-bs-toggle="dropdown">Courses</a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="course-academic.html">Academic Coaching</a></li>
+                        <li><a class="dropdown-item" href="course-career.html">Career Guidance</a></li>
+                        <li><a class="dropdown-item" href="course-skills.html">Skill Development</a></li>
+                        <li><a class="dropdown-item" href="course-online.html">Online Workshops</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle px-3" data-bs-toggle="dropdown">Services</a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="service-consulting.html">Consulting</a></li>
+                        <li><a class="dropdown-item" href="service-training.html">Training Programs</a></li>
+                        <li><a class="dropdown-item" href="service-counseling.html">Personal Counseling</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a href="blog.html" class="nav-link px-3">Blog</a>
+                </li>
+                <li class="nav-item">
+                    <a href="events.html" class="nav-link px-3">Events</a>
+                </li>
+                <li class="nav-item">
+                    <a href="gallery.html" class="nav-link px-3">Gallery</a>
+                </li>
+                <li class="nav-item">
+                    <a href="contact.html" class="nav-link px-3">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Mobile Slide Menu -->
+    <div id="mobileMenu" class="mobile-menu">
+        <button id="closeMenu" class="btn-close btn-close-white ms-auto m-3"></button>
+        <ul class="list-unstyled ps-2 pt-4 pe-4">
+            <!-- Home -->
+            <li><a href="index.html">Home</a></li>
+
+            <!-- Technology -->
+            <li>
+                <a href="#">Technology</a>
+                <ul class="submenu">
+                    <li><a href="categoriesBlog.html">AI & ML</a></li>
+                    <li><a href="categoriesBlog.html">Web Development</a></li>
+                    <li><a href="categoriesBlog.html">Mobile Apps</a></li>
+                    <li><a href="categoriesBlog.html">Gadgets</a></li>
+                    <li><a href="categoriesBlog.html">Software Reviews</a></li>
+                </ul>
+            </li>
+
+            <!-- Design -->
+            <li>
+                <a href="#">Design</a>
+                <ul class="submenu">
+                    <li><a href="categoriesBlog.html">UI/UX</a></li>
+                    <li><a href="categoriesBlog.html">Graphic Design</a></li>
+                    <li><a href="categoriesBlog.html">Inspiration</a></li>
+                    <li><a href="categoriesBlog.html">Case Studies</a></li>
+                </ul>
+            </li>
+
+            <!-- Business -->
+            <li>
+                <a href="#">Business</a>
+                <ul class="submenu">
+                    <li><a href="categoriesBlog.html">Startups</a></li>
+                    <li><a href="categoriesBlog.html">Marketing</a></li>
+                    <li><a href="categoriesBlog.html">Productivity</a></li>
+                    <li><a href="categoriesBlog.html">Entrepreneurship</a></li>
+                </ul>
+            </li>
+
+            <!-- Lifestyle -->
+            <li>
+                <a href="#">Lifestyle</a>
+                <ul class="submenu">
+                    <li><a href="categoriesBlog.html">Work-Life Balance</a></li>
+                    <li><a href="categoriesBlog.html">Personal Growth</a></li>
+                    <li><a href="categoriesBlog.html">Hobbies</a></li>
+                </ul>
+            </li>
+
+            <!-- Travel -->
+            <li>
+                <a href="#">Travel</a>
+                <ul class="submenu">
+                    <li><a href="categoriesBlog.html">Destinations</a></li>
+                    <li><a href="categoriesBlog.html">Travel Tips</a></li>
+                    <li><a href="categoriesBlog.html">Photography</a></li>
+                </ul>
+            </li>
+
+            <!-- Tutorials -->
+            <li>
+                <a href="#">Tutorials</a>
+                <ul class="submenu">
+                    <li><a href="categoriesBlog.html">Frontend</a></li>
+                    <li><a href="categoriesBlog.html">Backend</a></li>
+                    <li><a href="categoriesBlog.html">Full Stack</a></li>
+                    <li><a href="categoriesBlog.html">No-Code Tools</a></li>
+                </ul>
+            </li>
+
+            <!-- Reviews -->
+            <li>
+                <a href="#">Reviews</a>
+                <ul class="submenu">
+                    <li><a href="categoriesBlog.html">Tech Reviews</a></li>
+                    <li><a href="categoriesBlog.html">Product Comparisons</a></li>
+                    <li><a href="categoriesBlog.html">Books</a></li>
+                </ul>
+            </li>
+
+            <!-- All -->
+            <li>
+                <a href="#">All</a>
+                <ul class="submenu">
+                    <li><a href="categoriesBlog.html">Health</a></li>
+                    <li><a href="categoriesBlog.html">Fitness</a></li>
+                    <li><a href="categoriesBlog.html">Wellness Tips</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+    <!-- Main Content Start -->
+    <main>
+        <!-- blog section body -->
+        <div class="container py-5">
+            <h2>Konika Coasing center</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt labore doloribus, atque similique amet
+                facilis laudantium autem tempora eaque cumque consequatur. Aut deserunt, inventore ut, voluptatem quo
+                fugiat hic soluta, veniam deleniti culpa nostrum neque veritatis eaque eius earum repellendus totam
+                sapiente? Consequatur, vel! Numquam deleniti soluta necessitatibus velit provident mollitia, eaque
+                suscipit eum dolores sapiente placeat reiciendis a. Eos ad iusto veritatis, iste incidunt ipsa magni ut
+                commodi ea illo, repudiandae quia quos nemo. Cupiditate, consequatur? Porro ducimus ratione omnis
+                similique sit dolores quam sint corporis adipisci reprehenderit officia architecto a necessitatibus
+                voluptate eaque, optio recusandae culpa veniam iure!</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt labore doloribus, atque similique amet
+                facilis laudantium autem tempora eaque cumque consequatur. Aut deserunt, inventore ut, voluptatem quo
+                fugiat hic soluta, veniam deleniti culpa nostrum neque veritatis eaque eius earum repellendus totam
+                sapiente? Consequatur, vel! Numquam deleniti soluta necessitatibus velit provident mollitia, eaque
+                suscipit eum dolores sapiente placeat reiciendis a. Eos ad iusto veritatis, iste incidunt ipsa magni ut
+                commodi ea illo, repudiandae quia quos nemo. Cupiditate, consequatur? Porro ducimus ratione omnis
+                similique sit dolores quam sint corporis adipisci reprehenderit officia architecto a necessitatibus
+                voluptate eaque, optio recusandae culpa veniam iure!</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt labore doloribus, atque similique amet
+                facilis laudantium autem tempora eaque cumque consequatur. Aut deserunt, inventore ut, voluptatem quo
+                fugiat hic soluta, veniam deleniti culpa nostrum neque veritatis eaque eius earum repellendus totam
+                sapiente? Consequatur, vel! Numquam deleniti soluta necessitatibus velit provident mollitia, eaque
+                suscipit eum dolores sapiente placeat reiciendis a. Eos ad iusto veritatis, iste incidunt ipsa magni ut
+                commodi ea illo, repudiandae quia quos nemo. Cupiditate, consequatur? Porro ducimus ratione omnis
+                similique sit dolores quam sint corporis adipisci reprehenderit officia architecto a necessitatibus
+                voluptate eaque, optio recusandae culpa veniam iure!</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt labore doloribus, atque similique amet
+                facilis laudantium autem tempora eaque cumque consequatur. Aut deserunt, inventore ut, voluptatem quo
+                fugiat hic soluta, veniam deleniti culpa nostrum neque veritatis eaque eius earum repellendus totam
+                sapiente? Consequatur, vel! Numquam deleniti soluta necessitatibus velit provident mollitia, eaque
+                suscipit eum dolores sapiente placeat reiciendis a. Eos ad iusto veritatis, iste incidunt ipsa magni ut
+                commodi ea illo, repudiandae quia quos nemo. Cupiditate, consequatur? Porro ducimus ratione omnis
+                similique sit dolores quam sint corporis adipisci reprehenderit officia architecto a necessitatibus
+                voluptate eaque, optio recusandae culpa veniam iure!</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt labore doloribus, atque similique amet
+                facilis laudantium autem tempora eaque cumque consequatur. Aut deserunt, inventore ut, voluptatem quo
+                fugiat hic soluta, veniam deleniti culpa nostrum neque veritatis eaque eius earum repellendus totam
+                sapiente? Consequatur, vel! Numquam deleniti soluta necessitatibus velit provident mollitia, eaque
+                suscipit eum dolores sapiente placeat reiciendis a. Eos ad iusto veritatis, iste incidunt ipsa magni ut
+                commodi ea illo, repudiandae quia quos nemo. Cupiditate, consequatur? Porro ducimus ratione omnis
+                similique sit dolores quam sint corporis adipisci reprehenderit officia architecto a necessitatibus
+                voluptate eaque, optio recusandae culpa veniam iure!</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt labore doloribus, atque similique amet
+                facilis laudantium autem tempora eaque cumque consequatur. Aut deserunt, inventore ut, voluptatem quo
+                fugiat hic soluta, veniam deleniti culpa nostrum neque veritatis eaque eius earum repellendus totam
+                sapiente? Consequatur, vel! Numquam deleniti soluta necessitatibus velit provident mollitia, eaque
+                suscipit eum dolores sapiente placeat reiciendis a. Eos ad iusto veritatis, iste incidunt ipsa magni ut
+                commodi ea illo, repudiandae quia quos nemo. Cupiditate, consequatur? Porro ducimus ratione omnis
+                similique sit dolores quam sint corporis adipisci reprehenderit officia architecto a necessitatibus
+                voluptate eaque, optio recusandae culpa veniam iure!</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt labore doloribus, atque similique amet
+                facilis laudantium autem tempora eaque cumque consequatur. Aut deserunt, inventore ut, voluptatem quo
+                fugiat hic soluta, veniam deleniti culpa nostrum neque veritatis eaque eius earum repellendus totam
+                sapiente? Consequatur, vel! Numquam deleniti soluta necessitatibus velit provident mollitia, eaque
+                suscipit eum dolores sapiente placeat reiciendis a. Eos ad iusto veritatis, iste incidunt ipsa magni ut
+                commodi ea illo, repudiandae quia quos nemo. Cupiditate, consequatur? Porro ducimus ratione omnis
+                similique sit dolores quam sint corporis adipisci reprehenderit officia architecto a necessitatibus
+                voluptate eaque, optio recusandae culpa veniam iure!</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt labore doloribus, atque similique amet
+                facilis laudantium autem tempora eaque cumque consequatur. Aut deserunt, inventore ut, voluptatem quo
+                fugiat hic soluta, veniam deleniti culpa nostrum neque veritatis eaque eius earum repellendus totam
+                sapiente? Consequatur, vel! Numquam deleniti soluta necessitatibus velit provident mollitia, eaque
+                suscipit eum dolores sapiente placeat reiciendis a. Eos ad iusto veritatis, iste incidunt ipsa magni ut
+                commodi ea illo, repudiandae quia quos nemo. Cupiditate, consequatur? Porro ducimus ratione omnis
+                similique sit dolores quam sint corporis adipisci reprehenderit officia architecto a necessitatibus
+                voluptate eaque, optio recusandae culpa veniam iure!</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt labore doloribus, atque similique amet
+                facilis laudantium autem tempora eaque cumque consequatur. Aut deserunt, inventore ut, voluptatem quo
+                fugiat hic soluta, veniam deleniti culpa nostrum neque veritatis eaque eius earum repellendus totam
+                sapiente? Consequatur, vel! Numquam deleniti soluta necessitatibus velit provident mollitia, eaque
+                suscipit eum dolores sapiente placeat reiciendis a. Eos ad iusto veritatis, iste incidunt ipsa magni ut
+                commodi ea illo, repudiandae quia quos nemo. Cupiditate, consequatur? Porro ducimus ratione omnis
+                similique sit dolores quam sint corporis adipisci reprehenderit officia architecto a necessitatibus
+                voluptate eaque, optio recusandae culpa veniam iure!</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt labore doloribus, atque similique amet
+                facilis laudantium autem tempora eaque cumque consequatur. Aut deserunt, inventore ut, voluptatem quo
+                fugiat hic soluta, veniam deleniti culpa nostrum neque veritatis eaque eius earum repellendus totam
+                sapiente? Consequatur, vel! Numquam deleniti soluta necessitatibus velit provident mollitia, eaque
+                suscipit eum dolores sapiente placeat reiciendis a. Eos ad iusto veritatis, iste incidunt ipsa magni ut
+                commodi ea illo, repudiandae quia quos nemo. Cupiditate, consequatur? Porro ducimus ratione omnis
+                similique sit dolores quam sint corporis adipisci reprehenderit officia architecto a necessitatibus
+                voluptate eaque, optio recusandae culpa veniam iure!</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt labore doloribus, atque similique amet
+                facilis laudantium autem tempora eaque cumque consequatur. Aut deserunt, inventore ut, voluptatem quo
+                fugiat hic soluta, veniam deleniti culpa nostrum neque veritatis eaque eius earum repellendus totam
+                sapiente? Consequatur, vel! Numquam deleniti soluta necessitatibus velit provident mollitia, eaque
+                suscipit eum dolores sapiente placeat reiciendis a. Eos ad iusto veritatis, iste incidunt ipsa magni ut
+                commodi ea illo, repudiandae quia quos nemo. Cupiditate, consequatur? Porro ducimus ratione omnis
+                similique sit dolores quam sint corporis adipisci reprehenderit officia architecto a necessitatibus
+                voluptate eaque, optio recusandae culpa veniam iure!</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt labore doloribus, atque similique amet
+                facilis laudantium autem tempora eaque cumque consequatur. Aut deserunt, inventore ut, voluptatem quo
+                fugiat hic soluta, veniam deleniti culpa nostrum neque veritatis eaque eius earum repellendus totam
+                sapiente? Consequatur, vel! Numquam deleniti soluta necessitatibus velit provident mollitia, eaque
+                suscipit eum dolores sapiente placeat reiciendis a. Eos ad iusto veritatis, iste incidunt ipsa magni ut
+                commodi ea illo, repudiandae quia quos nemo. Cupiditate, consequatur? Porro ducimus ratione omnis
+                similique sit dolores quam sint corporis adipisci reprehenderit officia architecto a necessitatibus
+                voluptate eaque, optio recusandae culpa veniam iure!</p>
+        </div>
+
+    </main>
+    <!-- Main Content End -->
+    <!-- Footer Section -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row text-md-start">
+
+                <!-- Column 3: Logo and Social -->
+                <div class="col-md-5 mb-4">
+                    <div class="footer-logo">Blog<span>Sphere</span></div>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                    <p class="mt-3" style="font-size: 14px; color: #bbb;">
+                        Inspiring content for creative minds and success-driven souls.
+                    </p>
+                </div>
+
+                <!-- Column 1: Useful Links -->
+                <div class="col-md-2 mb-4">
+                    <h5>Useful Links</h5>
+                    <ul>
+                        <li><a href="#">FAQs</a></li>
+                        <li><a href="#">Support</a></li>
+                        <li><a href="#">Advertise</a></li>
+                        <li><a href="#">Partners</a></li>
+                        <li><a href="#">Careers</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 2: Quick Links -->
+                <div class="col-md-2 mb-4">
+                    <h5>Quick Links</h5>
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Write for Us</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 4: Newsletter + Categories -->
+                <div class="col-md-3 mb-4">
+                    <h5>Newsletter</h5>
+                    <form class="newsletter">
+                        <input type="email" placeholder="Your email address" required>
+                        <button type="submit">Subscribe</button>
+                    </form>
+                    <h5 class="mt-4">Popular Categories</h5>
+                    <ul>
+                        <li><a href="#">Motivation</a></li>
+                        <li><a href="#">Productivity</a></li>
+                        <li><a href="#">Self-Growth</a></li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <!-- Footer Bottom -->
+            <div class="footer-bottom">
+                &copy; 2025 BlogShpas. All Rights Reserved | Designed with ❤️ by BlogSphere Team
+            </div>
+        </div>
+    </footer>
+
+    <!-- Footer End -->
+
+    <!-- Bootstrap JS (with Popper) -->
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Font Awesome -->
+    <script src="assets/js/all.min.js"></script>
+
+    <!-- Custom JS -->
+    <script src="assets/js/script.js"></script>
+
+    <!-- Responsive Menu JS -->
+    <script src="assets/js/responsiveMenu.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+</body>
+
+</html>
