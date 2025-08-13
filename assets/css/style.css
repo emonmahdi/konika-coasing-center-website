@@ -650,6 +650,54 @@ ul li {
   }
 }
 
+/* -----------Admission Styles ----------------- */
+.section-title span.text-primary {
+  color: var(--primary);
+}
+
+.section-title span.text-secondary {
+  color: var(--secondary);
+}
+
+.admission-icon {
+  font-size: 3rem;
+  color: var(--primary);
+}
+
+.admission-card {
+  background: #fff;
+  border: 1px solid var(--muted);
+  border-radius: 12px;
+  padding: 25px;
+  text-align: center;
+  transition: var(--transition);
+}
+
+.admission-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
+.admission-card h4 {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: var(--secondary);
+  margin-bottom: 15px;
+}
+
+.admission-card ul,
+.admission-card ol {
+  text-align: left;
+  padding-left: 20px;
+  margin-bottom: 0;
+}
+
+.admission-card li {
+  font-size: 1rem;
+  color: var(--text-para);
+  margin-bottom: 8px;
+}
+
 /* -----------Footer Styles ----------------- */
 .footer {
   background-color: #101010;
@@ -687,7 +735,7 @@ ul li {
 }
 
 .footer-logo {
-  font-size: 34px;
+  font-size: 24px;
   font-weight: bold;
   color: #fff;
   margin-bottom: 15px;
