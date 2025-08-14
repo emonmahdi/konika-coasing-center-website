@@ -190,7 +190,7 @@ ul li {
 }
 .header-bottom .nav-link:hover,
 .header-bottom .dropdown-item:hover {
-  color: #007bff;
+  color: var(--primary);
 }
 
 /* Search */
