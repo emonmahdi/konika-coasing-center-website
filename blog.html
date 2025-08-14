@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Coasing Website</title>
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    <!-- Bootstrap CSS -->
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link href="assets/css/all.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link href="assets/css/style.css" rel="stylesheet">
+    <!-- Favicon (Optional) -->
+    <link rel="icon" href="assets/images/favicon.png" type="image/png">
+    <!-- Animate.css for smooth animations -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
+    <style>
+        :root {
+            --primary: #ec1c24;
+            --secondary: #1c353d;
+        }
+
+        .blog-card {
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .blog-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .blog-card img {
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .card-body {
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+        }
+
+        .card-title a {
+            color: var(--primary);
+            margin-bottom: 20px;
+            font-size: 24px;
+
+            &:hover {
+                color: var(--secondary)
+            }
+        }
+
+        .card-text {
+            flex-grow: 1;
+            margin: 15px 0;
+            /* Pushes button to bottom */
+        }
+
+        .sidebar {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+        }
+
+        .sidebar h5 {
+            border-bottom: 2px solid var(--primary);
+            padding-bottom: 8px;
+            margin-bottom: 15px;
+            font-weight: bold;
+            color: var(--secondary);
+        }
+
+        .sidebar ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .sidebar ul li {
+            margin-bottom: 8px;
+        }
+
+        .sidebar ul li a {
+            text-decoration: none;
+            color: var(--secondary);
+        }
+
+        .sidebar ul li a:hover {
+            color: var(--primary);
+        }
+    </style>
+
+</head>
+
+<body>
+    <!-- Header -->
+    <!-- Header Top -->
+    <header class="topbar-header text-white">
+        <div class="container">
+            <div class="row align-items-center text-center text-md-start">
+                <!-- Left: Social Icons -->
+                <div class="col-12 col-md-4 d-flex justify-content-center justify-content-md-start gap-3">
+                    <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+                <!-- Center: Coaching Center Address -->
+                <div class="col-12 col-md-4 text-center">
+                    <span class="fw-bold text-white">Address</span><br>
+                    <small class="text-white">
+                        <i class="fas fa-map-marker-alt me-1"></i> Mymensingh Sadar, Bangladesh
+                    </small>
+                </div>
+                <!-- Right: Mobile Number -->
+                <div class="col-12 col-md-4 d-flex justify-content-center justify-content-md-end gap-2">
+                    <span><i class="fas fa-phone-alt me-1 text-success"></i> +880 1711-000000</span>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- Bottom Sticky Nav -->
+    <nav class="header-bottom sticky-top shadow-sm bg-white">
+        <div class="container d-flex align-items-center justify-content-between py-2">
+            <!-- Logo -->
+            <a href="index.html" class="navbar-brand d-flex align-items-center">
+                <img src="assets/images/konika.jfif" alt="Konika Coaching" height="40" class="me-2">
+            </a>
+            <!-- Hamburger for Mobile -->
+            <button class="btn d-md-none" id="menu-toggle">
+                <i class="fas fa-bars fs-5"></i>
+            </button>
+            <!-- Main Menu -->
+            <ul class="nav d-none d-md-flex mb-0 fw-semibold">
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link px-3">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="about.html" class="nav-link px-3">About Us</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle px-3" data-bs-toggle="dropdown">Courses</a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="course-academic.html">Academic Coaching</a></li>
+                        <li><a class="dropdown-item" href="course-career.html">Career Guidance</a></li>
+                        <li><a class="dropdown-item" href="course-skills.html">Skill Development</a></li>
+                        <li><a class="dropdown-item" href="course-online.html">Online Workshops</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a href="blog.html" class="nav-link px-3">Blog</a>
+                </li>
+                <li class="nav-item">
+                    <a href="gallery.html" class="nav-link px-3">Gallery</a>
+                </li>
+                <li class="nav-item">
+                    <a href="contact.html" class="nav-link px-3">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <!-- Mobile Slide Menu -->
+    <div id="mobileMenu" class="mobile-menu">
+        <button id="closeMenu" class="btn-close btn-close-white ms-auto m-3"></button>
+        <ul class="list-unstyled ps-2 pt-4 pe-4">
+            <!-- Home -->
+            <li><a href="index.html">Home</a></li>
+            <!-- About Us -->
+            <li><a href="about.html">About Us</a></li>
+            <!-- Courses -->
+            <li>
+                <a href="#">Courses</a>
+                <ul class="submenu">
+                    <li><a href="course-academic.html">Academic Coaching</a></li>
+                    <li><a href="course-career.html">Career Guidance</a></li>
+                    <li><a href="course-skills.html">Skill Development</a></li>
+                    <li><a href="course-online.html">Online Workshops</a></li>
+                </ul>
+            </li>
+            <!-- Blog -->
+            <li><a href="blog.html">Blog</a></li>
+            <!-- Gallery -->
+            <li><a href="gallery.html">Gallery</a></li>
+            <!-- Contact -->
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </div>
+    <!-- Main Content Start -->
+    <main>
+        <!-- Main Blog Section -->
+        <div class="container my-5">
+            <div class="row g-4">
+
+                <!-- Blog Content -->
+                <div class="col-lg-8">
+                    <div class="row g-4">
+
+                        <!-- Blog Card 1 -->
+                        <div class="col-md-6 d-flex">
+                            <div class="card blog-card animate__animated animate__fadeInUp w-100">
+                                <img src="assets/images/blog/b1.jfif" class="card-img-top" alt="Blog Image">
+                                <div class="card-body">
+                                    <h5 class="card-title" style="color:var(--secondary)"><a href="#">Cadet Admission
+                                            Tips</a> </h5>
+                                    <p class="card-text">Learn the top strategies to prepare for cadet admission exams,
+                                        focusing on time management and subject mastery. Practice with mock tests to
+                                        simulate real exam conditions.</p>
+                                    <a href="#" class="konika-btn konika-btn-primary text-center">Read
+                                        More</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Blog Card 2 -->
+                        <div class="col-md-6 d-flex">
+                            <div class="card blog-card animate__animated animate__fadeInUp w-100"
+                                style="animation-delay:0.2s;">
+                                <img src="assets/images/blog/b2.png" class="card-img-top" alt="Blog Image">
+                                <div class="card-body">
+                                    <h5 class="card-title" style="color:var(--secondary)"><a href="#">Math Tricks for
+                                            Exams</a> </h5>
+                                    <p class="card-text">Quick mental math tips and tricks to save time and improve
+                                        accuracy in competitive exams.</p>
+                                    <a href="#" class="konika-btn konika-btn-primary text-center">Read
+                                        More</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Blog Card 3 -->
+                        <div class="col-md-6 d-flex">
+                            <div class="card blog-card animate__animated animate__fadeInUp w-100"
+                                style="animation-delay:0.4s;">
+                                <img src="assets/images/blog/b3.jfif" class="card-img-top" alt="Blog Image">
+                                <div class="card-body">
+                                    <h5 class="card-title" style="color:var(--secondary)"><a href="#">English Grammar
+                                            Basics</a> </h5>
+                                    <p class="card-text">Master the essential grammar rules that will help you excel in
+                                        cadet college entrance exams. Includes examples, exercises, and common mistakes
+                                        to avoid.</p>
+                                    <a href="#" class="konika-btn konika-btn-primary text-center">Read
+                                        More</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Blog Card 4 -->
+                        <div class="col-md-6 d-flex">
+                            <div class="card blog-card animate__animated animate__fadeInUp w-100"
+                                style="animation-delay:0.6s;">
+                                <img src="assets/images/blog/b1.jfif" class="card-img-top" alt="Blog Image">
+                                <div class="card-body">
+                                    <h5 class="card-title"><a href="#">Daily Study Routine</a></h5>
+                                    <p class="card-text">A perfect daily study schedule designed for cadet admission
+                                        candidates to maximize results. Focus on consistency and balanced subject
+                                        coverage.</p>
+                                    <a href="#" class="konika-btn konika-btn-primary text-center">Read
+                                        More</a>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- Sidebar -->
+                <div class="col-lg-4">
+                    <div class="sidebar border animate__animated animate__fadeInRight">
+                        <h5>Categories</h5>
+                        <ul>
+                            <li><a href="#"> <i class="fa-regular fa-hand-point-right"></i> Cadet Exam Preparation</a>
+                            </li>
+                            <li><a href="#"> <i class="fa-regular fa-hand-point-right"></i> Math Tricks</a></li>
+                            <li><a href="#"> <i class="fa-regular fa-hand-point-right"></i> English Tips</a></li>
+                            <li><a href="#"> <i class="fa-regular fa-hand-point-right"></i> General Knowledge</a></li>
+                        </ul>
+
+                        <h5 class="mt-5">Recent Posts</h5>
+                        <ul>
+                            <li><a href="#"> <i class="fa-regular fa-hand-point-right"></i> Top 5 Study Hacks</a></li>
+                            <li><a href="#"> <i class="fa-regular fa-hand-point-right"></i> Cadet College Interview
+                                    Tips</a></li>
+                            <li><a href="#"> <i class="fa-regular fa-hand-point-right"></i> Time Management for
+                                    Students</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+
+    </main>
+    <!-- Main Content End -->
+    <!-- Footer Section -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row text-md-start">
+                <!-- Column 1: Logo & Social -->
+                <div class="col-md-3 mb-4">
+                    <div class="footer-logo">
+                        <a href="index.html" class="text-white">
+                            <a href="index.html" class="navbar-brand d-flex align-items-center">
+                                <img src="assets/images/konika.jfif" alt="Konika Coaching" height="80" class="me-2">
+                            </a>
+                            <!-- Konika <span>Cadet Academy</span></a> -->
+                    </div>
+                    <p class="mt-2" style="font-size: 14px; color: #bbb;">
+                        Empowering students with knowledge, skills, and confidence since 2005.
+                    </p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <!-- Column 2: Useful Links -->
+                <div class="col-md-2 mb-4">
+                    <h5>Useful Links</h5>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="admission.html">Admission Info</a></li>
+                        <li><a href="gallery.html">Photo Gallery</a></li>
+                        <li><a href="testimonials.html">Testimonials</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <!-- Column 3: Academic Resources -->
+                <div class="col-md-2 mb-4">
+                    <h5>Academics</h5>
+                    <ul>
+                        <li><a href="courses.html">Our Courses</a></li>
+                        <li><a href="schedule.html">Class Schedule</a></li>
+                        <li><a href="results.html">Exam Results</a></li>
+                        <li><a href="events.html">Events & Seminars</a></li>
+                        <li><a href="faqs.html">FAQs</a></li>
+                    </ul>
+                </div>
+                <!-- Column 4: Newsletter -->
+                <div class="col-md-2 mb-4">
+                    <h5>Join Our Newsletter</h5>
+                    <form class="newsletter">
+                        <input type="email" placeholder="Your email address" required>
+                        <button type="submit">Subscribe</button>
+                    </form>
+                </div>
+                <!-- Column 3: Academic Resources -->
+                <div class="col-md-3 mb-4">
+                    <h5>Contact Info</h5>
+                    <ul>
+                        <li><i class="fas fa-map-marker-alt me-2"></i> Mymensingh Sadar, Bangladesh</li>
+                        <li><i class="fas fa-phone me-2"></i> +880 1234-567890</li>
+                        <li><i class="fas fa-envelope me-2"></i> info@konikacoaching.com</li>
+                    </ul>
+                </div>
+            </div>
+            <!-- Footer Bottom -->
+            <div class="footer-bottom">
+                &copy; 2025 Konika Cadet Academy. All Rights Reserved | Designed with ❤️ for Students
+            </div>
+        </div>
+    </footer>
+    <!-- Footer End -->
+    <!-- Bootstrap JS (with Popper) -->
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <!-- Font Awesome -->
+    <script src="assets/js/all.min.js"></script>
+    <!-- Custom JS -->
+    <script src="assets/js/script.js"></script>
+    <!-- Responsive Menu JS -->
+    <script src="assets/js/responsiveMenu.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+    <script>
+        AOS.init();
+    </script>
+    <script> new WOW().init(); </script>
+
+    <script>
+        document.querySelectorAll(".faq-question").forEach(button => {
+            button.addEventListener("click", () => {
+                const faqItem = button.parentElement;
+                faqItem.classList.toggle("active");
+            });
+        });
+
+    </script>
+
+
+</body>
+
+</html>
