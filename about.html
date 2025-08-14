@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+      <title>Coasing Website</title>
+      <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+      <!-- Bootstrap CSS -->
+      <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+      <!-- Font Awesome -->
+      <link href="assets/css/all.min.css" rel="stylesheet">
+      <!-- Custom CSS -->
+      <link href="assets/css/style.css" rel="stylesheet">
+      <!-- Favicon (Optional) -->
+      <link rel="icon" href="assets/images/favicon.png" type="image/png">
+      <!-- Animate.css for smooth animations -->
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
+      <style>
+        :root {
+        --primary: #ec1c24;
+        --secondary: #1c353d;
+        --background: #ffffff;
+        --font-family: "Inter", sans-serif;
+        --text: #212529;
+        --text-para: #5c5f71;
+        --heading: #0056b3;
+        --muted: #adb5bd;
+        --transition: 0.3s;
+        }
+        /* About Page Header Section */
+.page-top-header {
+  background: url('/assets/images/page-top.jpg') center/cover no-repeat;
+  position: relative;
+  padding: 40px 0;
+  color: #fff;
+}
+.about-header::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+}
+.about-header .container {
+  position: relative;
+  z-index: 2;
+}
+.breadcrumb-item a {
+  color: #f8f9fa;
+  text-decoration: none;
+}
+.breadcrumb-item.active {
+  color: #ffc107;
+}
+
+/* Section Defaults */
+.about-page-section,
+.about-section {
+  padding: 60px 0;
+}
+.bg-light-gray {
+  background-color: #f8f9fa;
+}
+
+/* Icon Boxes */
+.icon-box {
+  background: #fff;
+  border-radius: 12px;
+  padding: 25px;
+  text-align: center;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+  transition: all 0.3s ease;
+  height: 100%;
+}
+.icon-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 25px rgba(0,0,0,0.15);
+}
+.icon-box i {
+  font-size: 40px;
+  color: var(--primary) !important;
+  margin-bottom: 15px;
+}
+.primary-color-icon {
+  color: var(--primary) !important;
+  font-size: 40px;
+  margin-bottom: 15px;
+}
+.icon-box h5,
+.icon-box h4 {
+  color: var(--secondary);
+  font-weight: 600;
+}
+
+/* CTA Section */
+.cta {
+  background: var(--primary);
+  color: #fff;
+  padding: 80px 0;
+}
+.cta h2 {
+  font-weight: 700;
+}
+.cta .btn {
+  padding: 12px 30px;
+  font-size: 18px;
+  border-radius: 50px;
+  font-weight: 500;
+}
+.cta .btn:hover {
+  background: var(--secondary);
+  color: #fff;
+}
+      </style>
+   </head>
+   <body>
+      <!-- Header -->
+      <!-- Header Top -->
+      <header class="topbar-header text-white">
+         <div class="container">
+            <div class="row align-items-center text-center text-md-start">
+               <!-- Left: Social Icons -->
+               <div class="col-12 col-md-4 d-flex justify-content-center justify-content-md-start gap-3">
+                  <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                  <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                  <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                  <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+               </div>
+               <!-- Center: Coaching Center Address -->
+               <div class="col-12 col-md-4 text-center">
+                  <span class="fw-bold text-white">Address</span><br>
+                  <small class="text-white">
+                  <i class="fas fa-map-marker-alt me-1"></i> Mymensingh Sadar, Bangladesh
+                  </small>
+               </div>
+               <!-- Right: Mobile Number -->
+               <div class="col-12 col-md-4 d-flex justify-content-center justify-content-md-end gap-2">
+                  <span><i class="fas fa-phone-alt me-1 text-success"></i> +880 1711-000000</span>
+               </div>
+            </div>
+         </div>
+      </header>
+      <!-- Bottom Sticky Nav -->
+      <nav class="header-bottom sticky-top shadow-sm bg-white">
+         <div class="container d-flex align-items-center justify-content-between py-2">
+            <!-- Logo -->
+            <a href="index.html" class="navbar-brand d-flex align-items-center">
+            <img src="assets/images/konika.jfif" alt="Konika Coaching" height="40" class="me-2">
+            </a>
+            <!-- Hamburger for Mobile -->
+            <button class="btn d-md-none" id="menu-toggle">
+            <i class="fas fa-bars fs-5"></i>
+            </button>
+            <!-- Main Menu -->
+            <ul class="nav d-none d-md-flex mb-0 fw-semibold">
+               <li class="nav-item">
+                  <a href="index.html" class="nav-link px-3">Home</a>
+               </li>
+               <li class="nav-item">
+                  <a href="about.html" class="nav-link px-3">About Us</a>
+               </li>
+               <li class="nav-item dropdown">
+                  <a href="#" class="nav-link dropdown-toggle px-3" data-bs-toggle="dropdown">Courses</a>
+                  <ul class="dropdown-menu">
+                     <li><a class="dropdown-item" href="course-academic.html">Academic Coaching</a></li>
+                     <li><a class="dropdown-item" href="course-career.html">Career Guidance</a></li>
+                     <li><a class="dropdown-item" href="course-skills.html">Skill Development</a></li>
+                     <li><a class="dropdown-item" href="course-online.html">Online Workshops</a></li>
+                  </ul>
+               </li> 
+               <li class="nav-item">
+                  <a href="blog.html" class="nav-link px-3">Blog</a>
+               </li>
+               <li class="nav-item">
+                  <a href="events.html" class="nav-link px-3">Events</a>
+               </li>
+               <li class="nav-item">
+                  <a href="gallery.html" class="nav-link px-3">Gallery</a>
+               </li>
+               <li class="nav-item">
+                  <a href="contact.html" class="nav-link px-3">Contact</a>
+               </li>
+            </ul>
+         </div>
+      </nav>
+      <!-- Mobile Slide Menu -->
+      <div id="mobileMenu" class="mobile-menu">
+         <button id="closeMenu" class="btn-close btn-close-white ms-auto m-3"></button>
+         <ul class="list-unstyled ps-2 pt-4 pe-4">
+            <!-- Home -->
+            <li><a href="index.html">Home</a></li>
+            <!-- About Us -->
+            <li><a href="about.html">About Us</a></li>
+            <!-- Courses -->
+            <li>
+               <a href="#">Courses</a>
+               <ul class="submenu">
+                  <li><a href="course-academic.html">Academic Coaching</a></li>
+                  <li><a href="course-career.html">Career Guidance</a></li>
+                  <li><a href="course-skills.html">Skill Development</a></li>
+                  <li><a href="course-online.html">Online Workshops</a></li>
+               </ul>
+            </li> 
+            <!-- Blog -->
+            <li><a href="blog.html">Blog</a></li>
+            <!-- Events -->
+            <li><a href="events.html">Events</a></li>
+            <!-- Gallery -->
+            <li><a href="gallery.html">Gallery</a></li>
+            <!-- Contact -->
+            <li><a href="contact.html">Contact</a></li>
+         </ul>
+      </div> 
+      <!-- Main Content Start -->
+      <main>
+         <!-- About Page Header -->
+        <section class="page-top-header text-center">
+            <div class="container">
+            <h1 class="display-4 fw-bold">About Us</h1>
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb justify-content-center">
+                <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                <li class="breadcrumb-item active" aria-current="page">About</li>
+                </ol>
+            </nav>
+            </div>
+        </section>
+         <!-- About section  -->
+         <section class="about-section">
+            <div class="container">
+               <div class="row align-items-center">
+                  <!-- Image Column -->
+                  <div class="col-lg-6 mb-4 mb-lg-0">
+                     <div class="about-img-wrapper">
+                        <img src="assets/images/s1.jpg" alt="About Konika Cadet Academy"
+                           class="img-fluid rounded shadow-lg">
+                        <div class="about-img-overlay"></div>
+                     </div>
+                  </div>
+                  <!-- Content Column -->
+                  <div class="col-lg-6">
+                     <h2 class="about-title mb-3">About <span>Konika Cadet Academy</span></h2>
+                     <p class="about-text mb-4">
+                        Konika Cadet Academy is committed to producing future leaders with the perfect blend of discipline, academic excellence, and physical endurance. We provide an environment where values like patriotism, leadership, and teamwork thrive. Our professional instructors and modern facilities ensure that each cadet receives comprehensive training in academics, fitness, and character building.
+                     </p>
+                     <ul class="about-list mb-4">
+                        <li><i class="fas fa-check-circle me-2 list-icon"></i> Experienced & Qualified Teachers</li>
+                        <li><i class="fas fa-check-circle me-2 list-icon"></i> Interactive & Modern Learning Methods</li>
+                        <li><i class="fas fa-check-circle me-2 list-icon"></i> Affordable & Flexible Programs</li>
+                        <li><i class="fas fa-check-circle me-2 list-icon"></i> Proven Academic Success Rate</li>
+                        <li><i class="fas fa-check-circle me-2 list-icon"></i> Comprehensive Physical & Leadership Training</li>
+                        <li><i class="fas fa-check-circle me-2 list-icon"></i> Safe, Supportive & Motivating Environment</li>
+                        <li><i class="fas fa-check-circle me-2 list-icon"></i> Participation in National Competitions & Events</li>
+                      </ul> 
+                  </div>
+               </div>
+            </div>
+         </section>   
+
+        <!-- Mission & Vision -->
+        <section class="about-section bg-light-gray">
+            <div class="container text-center"> 
+            <div class="text-center mb-5">
+                <h2 class="fw-bold section-title" data-aos="fade-up">Our Mission<span>& Vision</span></h2>
+                <p class="text-muted">Find answers to your solutions about Konika Cadet Academy.
+                </p>
+             </div> 
+            <div class="row mt-4">
+                <div class="col-md-6" data-aos="fade-right">
+                <div class="icon-box">
+                    <i class="fas fa-flag primary-color-icon"></i>
+                    <h4>Our Mission</h4>
+                    <p>To mold disciplined individuals with strong moral values, leadership skills, and the confidence to serve their community and nation.</p>
+                </div>
+                </div>
+                <div class="col-md-6" data-aos="fade-left">
+                <div class="icon-box">
+                    <i class="fas fa-lightbulb primary-color-icon"></i>
+                    <h4>Our Vision</h4>
+                    <p>To be recognized as a premier cadet academy, producing graduates who excel in all aspects of life with integrity and courage.</p>
+                </div>
+                </div>
+            </div>
+            </div>
+        </section>
+
+        <!-- Core Values -->
+        <section class="about-section">
+            <div class="container text-center"> 
+            <div class="text-center mb-5">
+                <h2 class="fw-bold section-title" data-aos="fade-up">Core <span> Values</span></h2>
+                <p class="text-muted">Find answers to your solutions about Konika Cadet Academy.
+                </p>
+             </div> 
+            <div class="row mt-4">
+                <div class="col-md-3" data-aos="zoom-in">
+                <div class="icon-box">
+                    <i class="fas fa-user-shield primary-color-icon"></i>
+                    <h5>Discipline</h5>
+                </div>
+                </div>
+                <div class="col-md-3" data-aos="zoom-in" data-aos-delay="100">
+                <div class="icon-box">
+                    <i class="fas fa-medal primary-color-icon"></i>
+                    <h5>Excellence</h5>
+                </div>
+                </div>
+                <div class="col-md-3" data-aos="zoom-in" data-aos-delay="200">
+                <div class="icon-box">
+                    <i class="fas fa-users primary-color-icon"></i>
+                    <h5>Teamwork</h5>
+                </div>
+                </div>
+                <div class="col-md-3" data-aos="zoom-in" data-aos-delay="300">
+                <div class="icon-box">
+                    <i class="fas fa-heart primary-color-icon"></i>
+                    <h5>Patriotism</h5>
+                </div>
+                </div>
+            </div>
+            </div>
+        </section>
+
+        <!-- Facilities Section -->
+        <section class="about-section bg-light-gray">
+            <div class="container"> 
+            <div class="text-center mb-5">
+                <h2 class="fw-bold section-title" data-aos="fade-up">Our <span>Facilities</span></h2>
+                <p class="text-muted">Find answers to your solutions about Konika Cadet Academy.
+                </p>
+             </div> 
+            <div class="row mt-4">
+                <div class="col-md-4" data-aos="fade-up">
+                <div class="icon-box">
+                    <i class="fas fa-school primary-color-icon"></i>
+                    <h5>Modern Classrooms</h5>
+                    <p>State-of-the-art classrooms with the latest learning technologies.</p>
+                </div>
+                </div>
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+                <div class="icon-box">
+                    <i class="fas fa-running primary-color-icon"></i>
+                    <h5>Training Grounds</h5>
+                    <p>Spacious outdoor areas for drills, athletics, and tactical exercises.</p>
+                </div>
+                </div>
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+                <div class="icon-box">
+                    <i class="fas fa-book-open primary-color-icon"></i>
+                    <h5>Library & Study Zones</h5>
+                    <p>Quiet, resource-rich spaces for focused academic development.</p>
+                </div>
+                </div>
+            </div>
+            </div>
+        </section>
+
+        <!-- Leadership Section -->
+        <section class="about-section">
+            <div class="container text-center"> 
+            <div class="text-center mb-5">
+                <h2 class="fw-bold section-title" data-aos="fade-up">Leadership <span>Training</span></h2>
+                <p class="text-muted px-5">Our leadership programs are designed to instill confidence, strategic thinking, and decision-making abilities in every cadet.
+                </p>
+             </div> 
+            <p data-aos="fade-up" data-aos-delay="100"></p>
+            <div class="row mt-4">
+                <div class="col-md-4" data-aos="fade-right">
+                <div class="icon-box">
+                    <i class="fas fa-chalkboard-teacher primary-color-icon"></i>
+                    <h5>Mentorship</h5>
+                </div>
+                </div>
+                <div class="col-md-4" data-aos="zoom-in">
+                <div class="icon-box">
+                    <i class="fas fa-bullseye primary-color-icon"></i>
+                    <h5>Goal-Oriented Training</h5>
+                </div>
+                </div>
+                <div class="col-md-4" data-aos="fade-left">
+                <div class="icon-box">
+                    <i class="fas fa-trophy primary-color-icon"></i>
+                    <h5>Achievement Driven</h5>
+                </div>
+                </div>
+            </div>
+            </div>
+        </section>
+
+        <!-- Call to Action -->
+        <section class="about-section cta text-center">
+            <div class="container" data-aos="zoom-in">
+            <h2>Join Konika Cadet Academy Today</h2>
+            <p>Be a part of a legacy of excellence, discipline, and leadership.</p>
+            <a href="contact.html" class="btn btn-light mt-3"><i class="fas fa-envelope"></i> Contact Us</a>
+            </div>
+        </section>
+      
+      </main>
+      <!-- Main Content End -->
+      <!-- Footer Section -->
+      <footer class="footer">
+         <div class="container">
+            <div class="row text-md-start">
+               <!-- Column 1: Logo & Social -->
+               <div class="col-md-3 mb-4">
+                  <div class="footer-logo">
+                     <a href="index.html" class="text-white">
+                     <a href="index.html" class="navbar-brand d-flex align-items-center">
+                     <img src="assets/images/konika.jfif" alt="Konika Coaching" height="80" class="me-2">
+                     </a>
+                     <!-- Konika <span>Cadet Academy</span></a> -->
+                  </div>
+                  <p class="mt-2" style="font-size: 14px; color: #bbb;">
+                     Empowering students with knowledge, skills, and confidence since 2005.
+                  </p>
+                  <div class="social-icons">
+                     <a href="#"><i class="fab fa-facebook-f"></i></a>
+                     <a href="#"><i class="fab fa-twitter"></i></a>
+                     <a href="#"><i class="fab fa-instagram"></i></a>
+                     <a href="#"><i class="fab fa-youtube"></i></a>
+                  </div>
+               </div>
+               <!-- Column 2: Useful Links -->
+               <div class="col-md-2 mb-4">
+                  <h5>Useful Links</h5>
+                  <ul>
+                     <li><a href="about.html">About Us</a></li>
+                     <li><a href="admission.html">Admission Info</a></li>
+                     <li><a href="gallery.html">Photo Gallery</a></li>
+                     <li><a href="testimonials.html">Testimonials</a></li>
+                     <li><a href="contact.html">Contact</a></li>
+                  </ul>
+               </div>
+               <!-- Column 3: Academic Resources -->
+               <div class="col-md-2 mb-4">
+                  <h5>Academics</h5>
+                  <ul>
+                     <li><a href="courses.html">Our Courses</a></li>
+                     <li><a href="schedule.html">Class Schedule</a></li>
+                     <li><a href="results.html">Exam Results</a></li>
+                     <li><a href="events.html">Events & Seminars</a></li>
+                     <li><a href="faqs.html">FAQs</a></li>
+                  </ul>
+               </div>
+               <!-- Column 4: Newsletter -->
+               <div class="col-md-2 mb-4">
+                  <h5>Join Our Newsletter</h5>
+                  <form class="newsletter">
+                     <input type="email" placeholder="Your email address" required>
+                     <button type="submit">Subscribe</button>
+                  </form>
+               </div>
+               <!-- Column 3: Academic Resources -->
+               <div class="col-md-3 mb-4">
+                  <h5>Contact Info</h5>
+                  <ul>
+                     <li><i class="fas fa-map-marker-alt me-2"></i> Mymensingh Sadar, Bangladesh</li>
+                     <li><i class="fas fa-phone me-2"></i> +880 1234-567890</li>
+                     <li><i class="fas fa-envelope me-2"></i> info@konikacoaching.com</li>
+                  </ul>
+               </div>
+            </div>
+            <!-- Footer Bottom -->
+            <div class="footer-bottom">
+               &copy; 2025 Konika Cadet Academy. All Rights Reserved | Designed with ❤️ for Students
+            </div>
+         </div>
+      </footer>
+      <!-- Footer End -->
+      <!-- Bootstrap JS (with Popper) -->
+      <script src="assets/js/bootstrap.bundle.min.js"></script>
+      <!-- Font Awesome -->
+      <script src="assets/js/all.min.js"></script>
+      <!-- Custom JS -->
+      <script src="assets/js/script.js"></script>
+      <!-- Responsive Menu JS -->
+      <script src="assets/js/responsiveMenu.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+      <script>
+         AOS.init();
+      </script> 
+      <script> new WOW().init(); </script>
+
+      <script>
+        document.querySelectorAll(".faq-question").forEach(button => {
+         button.addEventListener("click", () => {
+            const faqItem = button.parentElement;
+            faqItem.classList.toggle("active");
+         });
+         });
+
+         </script>
+         
+      
+   </body>
+</html>

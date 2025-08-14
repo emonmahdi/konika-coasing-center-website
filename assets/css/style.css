@@ -740,13 +740,18 @@ ul li {
 /* -----------Faq Section Styles ----------------- */ 
 
 .faq-section {
-  background: url('/assets/images/faq.avif') no-repeat top center;
-  background-size: cover; /* Ensures the image covers the entire section */
-  background-attachment: scroll; /* Optional: Parallax effect */
+  background-image: url('/assets/images/faq.avif');
+  background-repeat: no-repeat;
+  background-position: top right; /* Centered both ways */
+  background-size: contain;           /* Ensure full image is visible */
+  background-attachment: scroll;      /* Optional: 'fixed' for parallax effect */
+  background-color: #fff;             /* Fallback background color */
   padding: 50px 20px;
   position: relative;
   z-index: 1;
 }
+
+
 
 .faq-container {
   max-width: 900px;
@@ -936,3 +941,4 @@ ul li {
     font-size: 28px;
   }
 }
+/* -----------------About Page Style-------------- */
