@@ -676,7 +676,7 @@ ul li {
 
 .admission-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
 }
 
 .admission-card h4 {
@@ -715,7 +715,7 @@ ul li {
   background: #fff;
   border-radius: 15px;
   overflow: hidden;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease-in-out;
 }
 .achievement-card:hover {
@@ -737,21 +737,19 @@ ul li {
   font-size: 0.95rem;
   color: #555;
 }
-/* -----------Faq Section Styles ----------------- */ 
+/* -----------Faq Section Styles ----------------- */
 
 .faq-section {
-  background-image: url('/assets/images/faq.avif');
+  background-image: url("/assets/images/faq.avif");
   background-repeat: no-repeat;
   background-position: top right; /* Centered both ways */
-  background-size: contain;           /* Ensure full image is visible */
-  background-attachment: scroll;      /* Optional: 'fixed' for parallax effect */
-  background-color: #fff;             /* Fallback background color */
+  background-size: contain; /* Ensure full image is visible */
+  background-attachment: scroll; /* Optional: 'fixed' for parallax effect */
+  background-color: #fff; /* Fallback background color */
   padding: 50px 20px;
   position: relative;
   z-index: 1;
 }
-
-
 
 .faq-container {
   max-width: 900px;
@@ -831,7 +829,6 @@ ul li {
     font-size: 1rem;
   }
 }
-
 
 /* -----------Footer Styles ----------------- */
 .footer {
@@ -942,3 +939,39 @@ ul li {
   }
 }
 /* -----------------About Page Style-------------- */
+/* About Page Header Section */
+.page-top-header {
+  background: url("/assets/images/page-top.jpg") center/cover no-repeat;
+  position: relative;
+  padding: 40px 0;
+  color: #fff;
+}
+
+.page-top-header::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.page-top-header .container {
+  position: relative;
+  z-index: 2;
+}
+
+.breadcrumb-item a {
+  color: #f8f9fa !important;
+  text-decoration: none;
+}
+
+.breadcrumb-item.active {
+  color: #ffc107;
+}
+
+/* ------------Contact Section------------------ */
+.contact-section {
+  padding: 40px 0;
+}
+.contact-title {
+  color: var(--primary);
+}
