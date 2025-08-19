@@ -48,100 +48,6 @@
             color: var(--primary);
         }
 
-        /* Hero Section */
-        .course-hero {
-            background: linear-gradient(rgba(28, 53, 61, 0.7), rgba(28, 53, 61, 0.7)),
-                url('https://images.unsplash.com/photo-1584697964154-04e4f5d12e0b') center/cover no-repeat;
-            padding: 100px 20px;
-            color: white;
-            text-align: center;
-        }
-
-        .course-hero h1 {
-            font-size: 2.8rem;
-            font-weight: 700;
-        }
-
-        .course-hero p {
-            font-size: 1.2rem;
-            max-width: 700px;
-            margin: auto;
-        }
-
-        /* Course Content */
-        .course-content h3 {
-            color: var(--primary);
-            font-weight: 700;
-        }
-
-        .course-content ul {
-            list-style: none;
-            padding: 0;
-        }
-
-        .course-content ul li {
-            padding: 10px 0;
-            font-size: 1.05rem;
-        }
-
-        .course-content ul li i {
-            color: var(--primary);
-            margin-right: 8px;
-        }
-
-        .course-image {
-            border-radius: 10px;
-            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
-        }
-
-        /* FAQ Styles */
-        #faqAccordion .accordion-item {
-            border: none;
-            margin-bottom: 10px;
-            border-radius: 8px;
-            overflow: hidden;
-            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
-        }
-
-        #faqAccordion .accordion-button {
-            background-color: white;
-            color: var(--secondary);
-            font-weight: 600;
-            font-size: 1.05rem;
-            padding: 15px 20px;
-            border: none;
-            box-shadow: none;
-            transition: all 0.3s ease;
-        }
-
-        #faqAccordion .accordion-button:not(.collapsed) {
-            background-color: var(--primary);
-            color: #fff;
-            box-shadow: none;
-        }
-
-        #faqAccordion .accordion-button:focus {
-            box-shadow: none;
-        }
-
-        #faqAccordion .accordion-button::after {
-            filter: brightness(0) saturate(100%) invert(36%) sepia(92%) saturate(2789%) hue-rotate(345deg) brightness(96%) contrast(90%);
-            transition: transform 0.3s ease;
-        }
-
-        #faqAccordion .accordion-button:not(.collapsed)::after {
-            filter: brightness(0) invert(1);
-            transform: rotate(180deg);
-        }
-
-        #faqAccordion .accordion-body {
-            background-color: #fff;
-            color: var(--secondary);
-            padding: 15px 20px;
-            font-size: 0.95rem;
-            line-height: 1.6;
-            border-top: 1px solid rgba(0, 0, 0, 0.05);
-        }
 
 
         /* Modal Form */
@@ -155,6 +61,451 @@
             border-color: var(--primary);
             box-shadow: 0 0 0 0.2rem rgba(236, 28, 36, 0.25);
         }
+
+        /* ----------------- */
+        /* =================Course Details Page Style Start============================ */
+        .course-details-header {
+            background-color: #f8f8fc;
+            padding: 40px 0;
+        }
+
+        .left-details-top .breadcrumb-menu ol,
+        .course-type {
+            padding: 0;
+            margin: 0;
+            margin-bottom: 20px;
+        }
+
+        .left-details-top .breadcrumb-menu ol li {
+            display: inline-block;
+            margin-right: 5px;
+            font-size: 13px;
+        }
+
+        .course-type span {
+            display: inline-block;
+            background-color: var(--primary);
+            padding: 5px 20px;
+            font-size: 13px;
+            border-radius: 5px;
+            color: #fff;
+            margin-right: 10px;
+        }
+
+        .author-details {
+            border-right: 1px solid #ddd;
+            padding-right: 15px;
+        }
+
+        .author-name {
+            font-weight: 700;
+            font-size: 16px;
+        }
+
+        .author-name span {
+            font-size: 14px;
+            color: #555;
+            font-weight: 500;
+        }
+
+        .course-title-text h2 {
+            color: var(--secondary);
+            font-size: 25px;
+            padding: 10px 0;
+            font-weight: 600;
+            line-height: 1.7;
+            margin-bottom: 20px;
+        }
+
+        .short-text-top-author {
+            color: var(--secondary);
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        .course-author-students {
+            margin: 15px 0;
+        }
+
+        .course-author-students h5,
+        .course-author-students p {
+            margin-bottom: 0;
+        }
+
+        .author-img {
+            width: 50px;
+            height: 50px;
+            line-height: 50px;
+            border-radius: 50%;
+        }
+
+        .course-img-video img {
+            border-radius: 5px;
+        }
+
+        /* Centered Play Button with Ripple */
+        .play-btn {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: var(--primary);
+            color: white;
+            border-radius: 50%;
+            width: 60px;
+            height: 60px;
+            font-size: 24px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            z-index: 1;
+            animation: ripple 1.2s infinite;
+        }
+
+        @keyframes ripple {
+            0% {
+                box-shadow: 0 0 0 0 rgba(255, 0, 0, 0.4);
+            }
+
+            70% {
+                box-shadow: 0 0 0 10px rgba(255, 0, 0, 0);
+            }
+
+            100% {
+                box-shadow: 0 0 0 0 rgba(255, 0, 0, 0);
+            }
+        }
+
+        /* Modal Styles */
+        .video-popup {
+            display: none;
+            position: fixed;
+            z-index: 9999;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+
+        .video-popup-inner {
+            position: relative;
+            width: 80%;
+            max-width: 800px;
+            margin: 5% auto;
+            background: #000;
+            padding: 20px;
+            border-radius: 8px;
+        }
+
+        .close-video {
+            position: absolute;
+            top: 10px;
+            right: 15px;
+            font-size: 28px;
+            color: #fff;
+            cursor: pointer;
+        }
+
+        .course-overview-details p {
+            color: #333;
+        }
+
+        .course-overview-heading,
+        .course-benifits-heading,
+        .course-content-heading,
+        .course-tags-heading,
+        .course-review-heading,
+        .course-write-review {
+            color: var(--primary);
+            font-size: 24px;
+            font-weight: 700;
+        }
+
+        .benifit-learn-course li {
+            list-style: none;
+            color: #333;
+            margin: 5px 20px;
+        }
+
+        .benifit-learn-course i {
+            color: green;
+            margin-right: 6px;
+        }
+
+        .accordion-button .fa-angle-down {
+            transition: transform 0.3s ease;
+        }
+
+        .accordion-button:not(.collapsed) .fa-angle-down {
+            transform: rotate(180deg);
+        }
+
+        .course-tags li {
+            display: inline-block;
+            list-style: none;
+            padding: 5px 15px;
+            border: 1px solid #ddd;
+            margin-right: 10px;
+            margin-bottom: 15px;
+        }
+
+        /* course module style */
+        .custom-modal {
+            display: none;
+            position: fixed;
+            z-index: 1050;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0.6);
+            transition: all 0.3s ease;
+        }
+
+        .custom-modal-content {
+            background-color: #fff;
+            margin: 5% auto;
+            padding: 0;
+            border-radius: 8px;
+            width: 90%;
+            max-width: 700px;
+            position: relative;
+            animation: fadeIn 0.3s ease-in-out;
+        }
+
+        .close-modal-course-btn {
+            position: absolute;
+            top: -40px;
+            right: -40px;
+            font-size: 40px;
+            color: #fff;
+            cursor: pointer;
+            z-index: 10;
+        }
+
+        .close-modal-course-btn:hover {
+            color: #000;
+        }
+
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%;
+            padding-top: 30px;
+            height: 0;
+            overflow: hidden;
+            border-radius: 8px;
+        }
+
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: scale(0.95);
+            }
+
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        /* Review Container */
+
+        /* Heading */
+        .course-review-heading {
+            font-size: 1.75rem;
+            font-weight: 600;
+            margin-bottom: 2rem;
+        }
+
+        /* Review Item */
+        .review-item {
+            display: flex;
+            gap: 1rem;
+            align-items: flex-start;
+            background-color: #fff;
+            border: 1px solid #eee;
+            padding: 1rem;
+            border-radius: 0.5rem;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+            margin-bottom: 1.5rem;
+        }
+
+        .review-item img {
+            width: 48px;
+            height: 48px;
+            object-fit: cover;
+            border-radius: 50%;
+        }
+
+        .review-item .review-content {
+            flex: 1;
+        }
+
+        .review-item .review-header {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 0.25rem;
+        }
+
+        .review-item .review-header span {
+            font-size: 0.875rem;
+            color: #888;
+        }
+
+        .review-item .review-name {
+            font-weight: 600;
+            color: #333;
+        }
+
+        .review-item .review-rating {
+            color: #fbbf24;
+            font-size: 1rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .review-item .review-text {
+            color: #555;
+            font-size: 0.95rem;
+        }
+
+        /* Write Review Form */
+        .write-review {
+            background-color: #f9f9f9;
+            padding: 2rem 1.5rem;
+            border-radius: 0.5rem;
+            border: 1px solid #ddd;
+        }
+
+        .write-review h4 {
+            font-size: 1.25rem;
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+
+        .write-review form {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+        }
+
+        .write-review form input,
+        .write-review form textarea {
+            width: 100%;
+            padding: 0.75rem;
+            font-size: 1rem;
+            border: 1px solid #ccc;
+            border-radius: 0.375rem;
+            transition: border-color 0.2s;
+        }
+
+        .write-review form input:focus,
+        .write-review form textarea:focus {
+            border-color: var(--primary);
+            outline: none;
+        }
+
+        .write-review form textarea {
+            grid-column: span 2;
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        .write-review .rating-options {
+            display: flex;
+            gap: 0.5rem;
+            align-items: center;
+            grid-column: span 2;
+        }
+
+        .write-review .rating-options label {
+            font-size: 1.25rem;
+            color: #888;
+            cursor: pointer;
+        }
+
+        .write-review .rating-options input {
+            accent-color: #fbbf24;
+        }
+
+        /* Submit Button */
+        .write-review button {
+            display: block;
+            transition: background-color 0.2s ease;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .write-review form {
+                grid-template-columns: 1fr;
+            }
+
+            .write-review form textarea,
+            .write-review .rating-options,
+            .write-review button {
+                grid-column: span 1;
+            }
+        }
+
+        /* =sidebar */
+
+        .course-sidebar-details {
+            background-color: #fff;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+            border-radius: 12px;
+        }
+
+        .features-course li {
+            display: flex;
+            justify-content: space-between;
+            padding: 12px 0;
+            border-bottom: 1px solid #ddd;
+            font-size: 14px;
+            color: #333;
+        }
+
+        .features-course li:last-child {
+            border-bottom: none;
+        }
+
+        .course-price {
+            font-size: 28px;
+            color: #e53935;
+            font-weight: bold;
+        }
+
+        .payment-share img {
+            border-radius: 4px;
+            background: #f9f9f9;
+            padding: 4px;
+        }
+
+        .payment-share a {
+            transition: 0.3s ease;
+        }
+
+        .payment-share a:hover {
+            transform: scale(1.1);
+        }
+
+        .course-video-link {
+            color: var(--secondary);
+        }
+
+        /* =================Course Details Page Style End============================ */
+
+        /* ----------------- */
     </style>
 
 </head>
@@ -206,7 +557,7 @@
                     <a href="about.html" class="nav-link px-3">About Us</a>
                 </li>
                 <li class="nav-item dropdown">
-                    <a href="#" class="nav-link dropdown-toggle px-3" data-bs-toggle="dropdown">Courses</a>
+                    <a href="#" class="nav-link active dropdown-toggle px-3" data-bs-toggle="dropdown">Courses</a>
                     <ul class="dropdown-menu">
                         <li><a class="dropdown-item" href="courses.html">Academic Coaching</a></li>
                         <li><a class="dropdown-item" href="courses.html">Career Guidance</a></li>
@@ -271,180 +622,524 @@
                 </nav>
             </div>
         </section>
-        <!-- Course Details -->
-        <section class="py-5">
+        <!-- -------------------- -->
+        <section id="course-details-header" class="course-details-header">
             <div class="container">
-                <div class="row g-5 align-items-center">
-                    <!-- Left Content -->
-                    <div class="col-lg-6" data-aos="fade-right">
-                        <div class="course-content">
-                            <h3>What You Will Learn</h3>
-                            <ul>
-                                <li><i class="fas fa-check-circle"></i> Personalized study plans tailored to your
-                                    strengths</li>
-                                <li><i class="fas fa-check-circle"></i> Advanced exam preparation techniques</li>
-                                <li><i class="fas fa-check-circle"></i> Time management & productivity skills</li>
-                                <li><i class="fas fa-check-circle"></i> Regular performance analysis & feedback</li>
-                            </ul>
+                <div class="row d-flex align-items-center">
+                    <div class="col-md-6">
+                        <div class="left-details-top">
+                            <div class="breadcrumb-menu">
+                                <ol>
+                                    <li><a href="index.html">হোম > </a></li>
+                                    <li>কোর্স ></li>
+                                    <li>
+                                        🔥 ডিজিটাল মার্কেটিং শিখে তৈরি করুন আপনার ফ্রিল্যান্সিং
+                                        ক্যারিয়ার
+                                    </li>
+                                </ol>
+                            </div>
+                            <div class="course-type">
+                                <span>Web Development</span>
+                                <span>Programming</span>
+                            </div>
+                            <div class="course-title-text">
+                                <h2>
+                                    🔥 ডিজিটাল মার্কেটিং শিখে তৈরি করুন আপনার ফ্রিল্যান্সিং
+                                    ক্যারিয়ার
+                                </h2>
+                            </div>
+                            <p class="short-text-top-author">কোর্স ইন্সট্রাক্টর</p>
+                            <div class="course-author-students d-flex align-items-center gap-3">
+                                <div class="author-details d-flex align-items-center gap-3">
+                                    <img src="assets/images/trainer/trainer1.png" class="img-fluid author-img" alt="" />
+                                    <h5 class="author-name">
+                                        Abdul Matin <br />
+                                        <span>Senior Degital Marketer, Digitel Group</span>
+                                    </h5>
+                                </div>
+                                <div>
+                                    <p>41 enrolled students</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Image Section with Play Button -->
+                    <div class="col-md-6">
+                        <div class="right-details-top">
+                            <div class="course-img-video position-relative">
+                                <img src="assets/images/course/course4.jpg" class="img-fluid" alt="" />
+                                <div class="play-btn ripple" id="openVideoPopup">
+                                    <i class="fa fa-play"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
 
-                            <h3 class="mt-4">Course Benefits</h3>
+                    <!-- Video Modal -->
+                    <div class="video-popup" id="videoModal">
+                        <div class="video-popup-inner">
+                            <span class="close-video" id="closeVideoPopup">&times;</span>
+                            <iframe id="youtubeIframe" width="100%" height="400" src="" frameborder="0"
+                                allowfullscreen></iframe>
+                        </div>
+                    </div>
+                </div>
+                <!-- course overview -->
+                <div class="row d-flex my-5">
+                    <div class="col-md-8">
+                        <div class="course-overview-details">
+                            <h3 class="course-overview-heading">কোর্স পরিচিতি</h3>
                             <p>
-                                Our Academic Coaching program ensures students receive one-on-one attention from
-                                experienced mentors.
-                                Whether you are preparing for competitive exams or need help improving grades, we
-                                provide all the tools and
-                                strategies you need to succeed.
+                                এই ডিজিটাল মার্কেটিং কোর্সটি আপনাকে অনলাইন মার্কেটিং জগতের একটি
+                                পূর্ণাঙ্গ ধারণা দেবে। আপনি শিখবেন কীভাবে ফেসবুক, ইনস্টাগ্রাম,
+                                গুগল অ্যাডস, ইউটিউব ও ইমেইল মার্কেটিং-এর মাধ্যমে একটি ব্র্যান্ড
+                                বা ব্যবসার প্রচার ও প্রসার ঘটানো যায়। এছাড়াও আপনি জানতে পারবেন
+                                কিভাবে এসইও (SEO), কনটেন্ট মার্কেটিং এবং ডেটা অ্যানালিটিক্স
+                                ব্যবহার করে একটি কার্যকর মার্কেটিং কৌশল তৈরি করা যায়। কোর্স
+                                শেষে আপনি ডিজিটাল মার্কেটিং-এর প্র্যাকটিক্যাল স্কিল অর্জন করবেন
+                                যা আপনাকে ফ্রিল্যান্সিং, জব কিংবা নিজের ব্যবসায় কাজে লাগাতে
+                                পারবেন।
                             </p>
 
-                            <button class="konika-btn konika-btn-primary mt-3" data-bs-toggle="modal"
-                                data-bs-target="#enrollModal">
-                                Enroll Now
-                            </button>
+                            <div class="benifit-learn-course my-4">
+                                <h4 class="course-benifits-heading">কোর্সটি করে যা শিখবেন:</h4>
+                                <li>
+                                    <i class="fa-solid fa-check-double"></i> ডিজিটাল মার্কেটিং-এর
+                                    বেসিক ধারণা
+                                </li>
+                                <li>
+                                    <i class="fa-solid fa-check-double"></i> ফেসবুক ও ইনস্টাগ্রাম
+                                    মার্কেটিং কৌশল
+                                </li>
+                                <li>
+                                    <i class="fa-solid fa-check-double"></i> গুগল অ্যাডওয়ার্ডস ও
+                                    ইউটিউব মার্কেটিং
+                                </li>
+                                <li>
+                                    <i class="fa-solid fa-check-double"></i> এসইও (SEO) এবং
+                                    কনটেন্ট মার্কেটিং
+                                </li>
+                                <li>
+                                    <i class="fa-solid fa-check-double"></i> ইমেইল মার্কেটিং এবং
+                                    লিড জেনারেশন
+                                </li>
+                                <li>
+                                    <i class="fa-solid fa-check-double"></i>ডিজিটাল ক্যাম্পেইন
+                                    প্ল্যান ও রিপোর্টিং
+                                </li>
+                                <li>
+                                    <i class="fa-solid fa-check-double"></i>রিয়েল-লাইফ প্রজেক্টের
+                                    মাধ্যমে হ্যান্ডস-অন স্কিল
+                                </li>
+                            </div>
+
+                            <p>
+                                এই ডিজিটাল মার্কেটিং কোর্সটি শেষ করার পর আপনি আধুনিক অনলাইন
+                                মার্কেটিং-এর সকল গুরুত্বপূর্ণ দিক সম্পর্কে একটি পরিষ্কার ধারণা
+                                পাবেন। আপনি নিজেই ফেসবুক, গুগল ও ইউটিউবের মাধ্যমে কিভাবে
+                                বিজ্ঞাপন তৈরি ও পরিচালনা করবেন তা শিখবেন। এছাড়াও কোর্সে থাকছে
+                                রিয়েল-লাইফ প্রজেক্ট, অ্যাসাইনমেন্ট ও সার্টিফিকেট যা আপনার
+                                ক্যারিয়ারে বাড়তি মূল্য যোগ করবে। এই কোর্স আপনাকে চাকরি,
+                                ফ্রিল্যান্সিং বা নিজস্ব ব্যবসার প্রচারে সাহায্য করবে।
+                            </p>
+                        </div>
+                        <!-- Course Content -->
+                        <div class="course-content-module">
+                            <h3 class="course-content-heading my-4">কোর্স কনটেন্ট</h3>
+                            <div class="accordion" id="courseContentAccordion">
+                                <!-- Module 1 -->
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="headingOne">
+                                        <button
+                                            class="accordion-button d-flex justify-content-between align-items-center"
+                                            type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne"
+                                            aria-expanded="true" aria-controls="collapseOne">
+                                            <span>মডিউল ১: কোর্স পরিচিতি</span>
+                                        </button>
+                                    </h2>
+                                    <div id="collapseOne" class="accordion-collapse collapse show"
+                                        aria-labelledby="headingOne" data-bs-parent="#courseContentAccordion">
+                                        <div class="accordion-body p-2">
+                                            <ul class="list-unstyled">
+                                                <!-- <li
+                          class="d-flex justify-content-between align-items-center py-2 px-4"
+                        >
+                          <span
+                            ><i
+                              class="fa-solid fa-play-circle me-2 text-primary"
+                            ></i>
+                            স্বাগতম ও কোর্স ওভারভিউ</span
+                          >
+                          <i class="fa-solid fa-eye text-success"></i>
+                        </li> -->
+                                                <li class="d-flex justify-content-between align-items-center py-2 px-4">
+                                                    <span style="cursor: pointer">
+                                                        <i class="fa-solid fa-play-circle me-2 text-primary"></i>
+                                                        <a href="courseVideo.html" class="course-video-link">স্বাগতম ও
+                                                            কোর্স ওভারভিউ</a>
+                                                    </span>
+                                                    <i class="fa-solid fa-eye text-success"></i>
+                                                </li>
+
+                                                <li class="d-flex justify-content-between align-items-center py-2 px-4">
+                                                    <span><i class="fa-solid fa-play-circle me-2 text-primary"></i>
+                                                        <a href="courseVideo.html" class="course-video-link">শেখার
+                                                            গাইডলাইন</a>
+                                                    </span>
+                                                    <i class="fa-solid fa-lock text-muted"></i>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Module 2 -->
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="headingTwo">
+                                        <button
+                                            class="accordion-button collapsed d-flex justify-content-between align-items-center"
+                                            type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo"
+                                            aria-expanded="false" aria-controls="collapseTwo">
+                                            <span>মডিউল ২: ডিজিটাল মার্কেটিং এর ভিত্তি</span>
+                                        </button>
+                                    </h2>
+                                    <div id="collapseTwo" class="accordion-collapse collapse"
+                                        aria-labelledby="headingTwo" data-bs-parent="#courseContentAccordion">
+                                        <div class="accordion-body p-2">
+                                            <ul class="list-unstyled">
+                                                <li class="d-flex justify-content-between align-items-center py-2 px-4">
+                                                    <span><i class="fa-solid fa-play-circle me-2 text-primary"></i>
+                                                        <a href="courseVideo.html" class="course-video-link">ডিজিটাল
+                                                            মার্কেটিং কি?</a>
+                                                    </span>
+                                                    <i class="fa-solid fa-lock text-muted"></i>
+                                                </li>
+                                                <li class="d-flex justify-content-between align-items-center py-2 px-4">
+                                                    <span><i class="fa-solid fa-play-circle me-2 text-primary"></i>
+                                                        <a href="courseVideo.html" class="course-video-link">অনলাইন
+                                                            বিপণনের ধরন</a>
+                                                    </span>
+                                                    <i class="fa-solid fa-lock text-muted"></i>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Module 3 -->
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="headingThree">
+                                        <button
+                                            class="accordion-button collapsed d-flex justify-content-between align-items-center"
+                                            type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree"
+                                            aria-expanded="false" aria-controls="collapseThree">
+                                            <span>মডিউল ৩: সোশ্যাল মিডিয়া মার্কেটিং</span>
+                                        </button>
+                                    </h2>
+                                    <div id="collapseThree" class="accordion-collapse collapse"
+                                        aria-labelledby="headingThree" data-bs-parent="#courseContentAccordion">
+                                        <div class="accordion-body p-2">
+                                            <ul class="list-unstyled">
+                                                <li class="d-flex justify-content-between align-items-center py-2 px-4">
+                                                    <span><i class="fa-solid fa-play-circle me-2 text-primary"></i>
+                                                        <a href="courseVideo.html" class="course-video-link"> Facebook
+                                                            মার্কেটিং</a>
+                                                    </span>
+                                                    <i class="fa-solid fa-lock text-muted"></i>
+                                                </li>
+                                                <li class="d-flex justify-content-between align-items-center py-2 px-4">
+                                                    <span><i class="fa-solid fa-play-circle me-2 text-primary"></i>
+                                                        <a href="courseVideo.html" class="course-video-link">Instagram
+                                                            মার্কেটিং</a>
+                                                    </span>
+                                                    <i class="fa-solid fa-lock text-muted"></i>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Module 4 -->
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="headingFour">
+                                        <button
+                                            class="accordion-button collapsed d-flex justify-content-between align-items-center"
+                                            type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour"
+                                            aria-expanded="false" aria-controls="collapseFour">
+                                            <span>মডিউল ৪: গুগল মার্কেটিং & SEO</span>
+                                        </button>
+                                    </h2>
+                                    <div id="collapseFour" class="accordion-collapse collapse"
+                                        aria-labelledby="headingFour" data-bs-parent="#courseContentAccordion">
+                                        <div class="accordion-body p-2">
+                                            <ul class="list-unstyled">
+                                                <li class="d-flex justify-content-between align-items-center py-2 px-4">
+                                                    <span><i class="fa-solid fa-play-circle me-2 text-primary"></i>
+                                                        <a href="courseVideo.html" class="course-video-link">সার্চ
+                                                            ইঞ্জিন অপ্টিমাইজেশন (SEO)</a>
+                                                    </span>
+                                                    <i class="fa-solid fa-lock text-muted"></i>
+                                                </li>
+                                                <li class="d-flex justify-content-between align-items-center py-2 px-4">
+                                                    <span><i class="fa-solid fa-play-circle me-2 text-primary"></i>
+                                                        <a href="courseVideo.html" class="course-video-link">Google Ads
+                                                            পরিচিতি</a>
+                                                    </span>
+                                                    <i class="fa-solid fa-lock text-muted"></i>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Module 5 -->
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="headingFive">
+                                        <button
+                                            class="accordion-button collapsed d-flex justify-content-between align-items-center"
+                                            type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive"
+                                            aria-expanded="false" aria-controls="collapseFive">
+                                            <span>মডিউল ৫: ইমেইল মার্কেটিং</span>
+                                        </button>
+                                    </h2>
+                                    <div id="collapseFive" class="accordion-collapse collapse"
+                                        aria-labelledby="headingFive" data-bs-parent="#courseContentAccordion">
+                                        <div class="accordion-body p-2">
+                                            <ul class="list-unstyled">
+                                                <li class="d-flex justify-content-between align-items-center py-2 px-4">
+                                                    <span><i class="fa-solid fa-play-circle me-2 text-primary"></i>
+                                                        <a href="courseVideo.html" class="course-video-link">ইমেইল
+                                                            মার্কেটিং এর গুরুত্ব</a>
+                                                    </span>
+                                                    <i class="fa-solid fa-lock text-muted"></i>
+                                                </li>
+                                                <li class="d-flex justify-content-between align-items-center py-2 px-4">
+                                                    <span><i class="fa-solid fa-play-circle me-2 text-primary"></i>
+                                                        <a href="courseVideo.html" class="course-video-link">Mailchimp
+                                                            ব্যবহার</a>
+                                                    </span>
+                                                    <i class="fa-solid fa-lock text-muted"></i>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Module 6 -->
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="headingSix">
+                                        <button
+                                            class="accordion-button collapsed d-flex justify-content-between align-items-center"
+                                            type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix"
+                                            aria-expanded="false" aria-controls="collapseSix">
+                                            <span>মডিউল ৬: প্রজেক্ট এবং কেস স্টাডি</span>
+                                        </button>
+                                    </h2>
+                                    <div id="collapseSix" class="accordion-collapse collapse"
+                                        aria-labelledby="headingSix" data-bs-parent="#courseContentAccordion">
+                                        <div class="accordion-body p-2">
+                                            <ul class="list-unstyled">
+                                                <li class="d-flex justify-content-between align-items-center py-2 px-4">
+                                                    <span><i class="fa-solid fa-play-circle me-2 text-primary"></i>
+                                                        <a href="courseVideo.html" class="course-video-link">লাইভ
+                                                            মার্কেটিং ক্যাম্পেইন</a>
+                                                    </span>
+                                                    <i class="fa-solid fa-lock text-muted"></i>
+                                                </li>
+                                                <li class="d-flex justify-content-between align-items-center py-2 px-4">
+                                                    <span><i class="fa-solid fa-play-circle me-2 text-primary"></i>
+                                                        <a href="courseVideo.html" class="course-video-link"> ক্লায়েন্ট
+                                                            প্রজেক্ট বিশ্লেষণ</a>
+                                                    </span>
+                                                    <i class="fa-solid fa-lock text-muted"></i>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Module 7 -->
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="headingSeven">
+                                        <button
+                                            class="accordion-button collapsed d-flex justify-content-between align-items-center"
+                                            type="button" data-bs-toggle="collapse" data-bs-target="#collapseSeven"
+                                            aria-expanded="false" aria-controls="collapseSeven">
+                                            <span>মডিউল ৭: ফ্রিল্যান্সিং এবং ক্যারিয়ার গাইড</span>
+                                        </button>
+                                    </h2>
+                                    <div id="collapseSeven" class="accordion-collapse collapse"
+                                        aria-labelledby="headingSeven" data-bs-parent="#courseContentAccordion">
+                                        <div class="accordion-body p-2">
+                                            <ul class="list-unstyled">
+                                                <li class="d-flex justify-content-between align-items-center py-2 px-4">
+                                                    <span><i class="fa-solid fa-play-circle me-2 text-primary"></i>
+                                                        <a href="courseVideo.html"
+                                                            class="course-video-link">মার্কেটপ্লেস পরিচিতি</a>
+                                                    </span>
+                                                    <i class="fa-solid fa-lock text-muted"></i>
+                                                </li>
+                                                <li class="d-flex justify-content-between align-items-center py-2 px-4">
+                                                    <span><i class="fa-solid fa-play-circle me-2 text-primary"></i>
+                                                        <a href="courseVideo.html" class="course-video-link">প্রোফাইল ও
+                                                            গিগ তৈরি</a>
+                                                    </span>
+                                                    <i class="fa-solid fa-lock text-muted"></i>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="course-tags my-5">
+                            <h3 class="course-tags-heading">Tags</h3>
+                            <div>
+                                <li>Digital Marketing</li>
+                                <li>Web Development</li>
+                                <li>Graphics Design</li>
+                            </div>
+                        </div>
+                        <!-- Review Section -->
+                        <div class="course-review my-3">
+                            <h3 class="course-review-heading">Reviews</h3>
+
+                            <!-- Single Review -->
+                            <div class="review-item">
+                                <img src="https://i.pravatar.cc/48?img=3" alt="User Profile" />
+                                <div class="review-content">
+                                    <div class="review-header">
+                                        <span class="review-name">John Doe</span>
+                                        <span>2 days ago</span>
+                                    </div>
+                                    <div class="review-rating">★★★★☆</div>
+                                    <div class="review-text">
+                                        This course was very helpful. The content was clear and
+                                        well-structured!
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Another Review -->
+                            <div class="review-item">
+                                <img src="https://i.pravatar.cc/48?img=5" alt="User Profile" />
+                                <div class="review-content">
+                                    <div class="review-header">
+                                        <span class="review-name">Sarah Khan</span>
+                                        <span>1 week ago</span>
+                                    </div>
+                                    <div class="review-rating">★★★★★</div>
+                                    <div class="review-text">
+                                        Amazing course! Highly recommended for beginners.
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Write a Review Form -->
+                            <div class="write-review mt-3">
+                                <h4 class="course-write-review">Write a Review</h4>
+                                <form>
+                                    <input type="text" placeholder="Your Name" required />
+                                    <input type="email" placeholder="Your Email" required />
+
+                                    <div class="mb-3">
+                                        <label for="rating" class="form-label">Your Rating:</label>
+                                        <select id="rating" name="rating" class="form-select">
+                                            <option value="5">★★★★★ - Excellent</option>
+                                            <option value="4">★★★★ - Very Good</option>
+                                            <option value="3">★★★ - Good</option>
+                                            <option value="2">★★ - Fair</option>
+                                            <option value="1">★ - Poor</option>
+                                        </select>
+                                    </div>
+
+                                    <textarea placeholder="Write your review..." required></textarea>
+
+                                    <div class="submit-btn w-100 mx-auto">
+                                        <button type="submit" class="konika-btn konika-btn-primary">
+                                            Submit Review
+                                        </button>
+                                    </div>
+                                </form>
+                            </div>
                         </div>
                     </div>
+                    <div class="col-md-4">
+                        <div class="course-sidebar-details p-4 shadow-sm rounded bg-white">
+                            <h2 class="course-price mb-4">৳১২৯৯</h2>
+                            <ul class="features-course list-unstyled m-0">
+                                <li>
+                                    <span><i class="fa-solid fa-signal me-2"></i> কোর্স লেভেল</span>
+                                    <span>বেগিনার</span>
+                                </li>
+                                <li>
+                                    <span><i class="fa-solid fa-clock me-2"></i> কোর্স সময়কাল</span>
+                                    <span>১০ সপ্তাহ</span>
+                                </li>
+                                <li>
+                                    <span><i class="fa-solid fa-video me-2"></i> মোট লেকচার</span>
+                                    <span>২৫</span>
+                                </li>
+                                <li>
+                                    <span><i class="fa-solid fa-language me-2"></i> ভাষা</span>
+                                    <span>বাংলা</span>
+                                </li>
+                                <li>
+                                    <span><i class="fa-solid fa-puzzle-piece me-2"></i> কুইজ</span>
+                                    <span>আছে</span>
+                                </li>
+                                <li>
+                                    <span><i class="fa-solid fa-certificate me-2"></i> সার্টিফিকেট</span>
+                                    <span>উপলব্ধ</span>
+                                </li>
+                                <li>
+                                    <span><i class="fa-solid fa-unlock me-2"></i> এক্সেস</span>
+                                    <span>লাইফটাইম</span>
+                                </li>
+                                <li>
+                                    <span><i class="fa-solid fa-chalkboard-teacher me-2"></i> ইন্সট্রাক্টর
+                                        সাপোর্ট</span>
+                                    <span>আছে</span>
+                                </li>
+                            </ul>
 
-                    <!-- Right Image -->
-                    <div class="col-lg-6" data-aos="fade-left">
-                        <img src="https://images.unsplash.com/photo-1596495577886-d920f1fb7238"
-                            class="img-fluid course-image" alt="Academic Coaching">
+                            <!-- Bottom Payment and Share Section -->
+                            <div class="payment-share mt-4 pt-3 border-top">
+                                <div class="mb-3">
+                                    <strong>পেমেন্ট মেথডস:</strong>
+                                    <div class="d-flex flex-wrap gap-2 mt-2">
+                                        <img src="assets/images/payment/bKash.png" alt="Bkash" height="50" />
+                                        <img src="assets/images/payment/nagad.png" alt="Nagad" height="50" />
+                                        <img src="assets/images/payment/rocket.png" alt="Rocket" height="50" />
+                                        <img src="assets/images/payment/visa.png" alt="Visa" height="50" />
+                                    </div>
+                                </div>
+                                <div>
+                                    <strong>এই কোর্সটি শেয়ার করুন:</strong>
+                                    <div class="d-flex gap-3 mt-2">
+                                        <a href="#" class="text-primary"><i class="fab fa-facebook fa-lg"></i></a>
+                                        <a href="#" class="text-info"><i class="fab fa-twitter fa-lg"></i></a>
+                                        <a href="#" class="text-danger"><i class="fab fa-youtube fa-lg"></i></a>
+                                        <a href="#" class="text-success"><i class="fab fa-whatsapp fa-lg"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="buy-now-btn text-center my-4">
+                                <!-- <a href="enroll.html" class="btn btn-enroll">এখনই কিনুন</a> -->
+                                <button class="konika-btn konika-btn-primary mt-3" data-bs-toggle="modal"
+                                    data-bs-target="#enrollModal">
+                                    Enroll Now
+                                </button>
+                            </div>
+                        </div>
+
                     </div>
                 </div>
             </div>
         </section>
-
-        <!-- Curriculum -->
-        <section class="py-5 bg-light">
-            <div class="container" data-aos="zoom-in">
-                <h3 class="fw-bold text-center mb-4" style="color: var(--primary);">Course Curriculum</h3>
-                <div class="row g-4">
-                    <div class="col-md-4">
-                        <div class="p-4 bg-white rounded shadow-sm h-100">
-                            <h5>Module 1: Fundamentals</h5>
-                            <p>Introduction, study habits, and foundational skills.</p>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="p-4 bg-white rounded shadow-sm h-100">
-                            <h5>Module 2: Exam Techniques</h5>
-                            <p>Learn proven strategies to excel in exams efficiently.</p>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="p-4 bg-white rounded shadow-sm h-100">
-                            <h5>Module 3: Career Planning</h5>
-                            <p>Guidance on academic pathways and professional growth.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- FAQ -->
-        <section class="py-5">
-            <div class="container" data-aos="fade-up">
-                <h3 class="fw-bold text-center mb-4" style="color: var(--primary);">Frequently Asked Questions</h3>
-                <div class="accordion" id="faqAccordion">
-
-                    <!-- FAQ 1 -->
-                    <div class="accordion-item">
-                        <h2 class="accordion-header">
-                            <button class="accordion-button" type="button" data-bs-toggle="collapse"
-                                data-bs-target="#faq1">
-                                Who is this course for?
-                            </button>
-                        </h2>
-                        <div id="faq1" class="accordion-collapse collapse show">
-                            <div class="accordion-body">
-                                This course is for students preparing for competitive exams, school exams, and anyone
-                                wanting to improve academically.
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- FAQ 2 -->
-                    <div class="accordion-item">
-                        <h2 class="accordion-header">
-                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                data-bs-target="#faq2">
-                                How long is the course?
-                            </button>
-                        </h2>
-                        <div id="faq2" class="accordion-collapse collapse">
-                            <div class="accordion-body">
-                                The course duration is 3 months, with flexible schedules available to fit your learning
-                                pace.
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- FAQ 3 -->
-                    <div class="accordion-item">
-                        <h2 class="accordion-header">
-                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                data-bs-target="#faq3">
-                                What is the mode of teaching?
-                            </button>
-                        </h2>
-                        <div id="faq3" class="accordion-collapse collapse">
-                            <div class="accordion-body">
-                                We offer both online and offline classes with interactive lessons, live Q&A sessions,
-                                and personalized mentoring.
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- FAQ 4 -->
-                    <div class="accordion-item">
-                        <h2 class="accordion-header">
-                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                data-bs-target="#faq4">
-                                Are there any prerequisites?
-                            </button>
-                        </h2>
-                        <div id="faq4" class="accordion-collapse collapse">
-                            <div class="accordion-body">
-                                No prior experience is required. A willingness to learn and stay committed is all you
-                                need.
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- FAQ 5 -->
-                    <div class="accordion-item">
-                        <h2 class="accordion-header">
-                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                data-bs-target="#faq5">
-                                Will I get study materials?
-                            </button>
-                        </h2>
-                        <div id="faq5" class="accordion-collapse collapse">
-                            <div class="accordion-body">
-                                Yes, we provide comprehensive study materials, practice tests, and recorded lectures for
-                                your revision.
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- FAQ 6 -->
-                    <div class="accordion-item">
-                        <h2 class="accordion-header">
-                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                data-bs-target="#faq6">
-                                How do I enroll?
-                            </button>
-                        </h2>
-                        <div id="faq6" class="accordion-collapse collapse">
-                            <div class="accordion-body">
-                                You can enroll directly on our website by clicking the “Enroll Now” button and filling
-                                out the registration form.
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-        </section>
-
+        <!-- -------------------- -->
 
         <!-- Modal Enroll Form -->
         <div class="modal fade" id="enrollModal" tabindex="-1">
@@ -573,6 +1268,30 @@
             });
         });
 
+    </script>
+    <!-- course popup -->
+    <script>
+        const openBtn = document.getElementById('openVideoPopup');
+        const closeBtn = document.getElementById('closeVideoPopup');
+        const modal = document.getElementById('videoModal');
+        const iframe = document.getElementById('youtubeIframe');
+
+        openBtn.onclick = function () {
+            modal.style.display = "block";
+            iframe.src = "https://www.youtube.com/embed/MHwmmiZ5LHs?si=d031SMFrSmaOclaE";
+        }
+
+        closeBtn.onclick = function () {
+            modal.style.display = "none";
+            iframe.src = "";
+        }
+
+        window.onclick = function (event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+                iframe.src = "";
+            }
+        }
     </script>
 
 

@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Coasing Website</title>
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    <!-- Bootstrap CSS -->
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link href="assets/css/all.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link href="assets/css/style.css" rel="stylesheet">
+    <!-- Favicon (Optional) -->
+    <link rel="icon" href="assets/images/favicon.png" type="image/png">
+    <!-- Animate.css for smooth animations -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
+
+    <style>
+        :root {
+            --primary: #ec1c24;
+            --secondary: #1c353d;
+        }
+
+        /* Button Styles */
+        .konika-btn {
+            display: inline-block;
+            padding: 12px 28px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            border-radius: 50px;
+            transition: all 0.3s ease;
+            text-decoration: none;
+        }
+
+        .konika-btn-primary {
+            background-color: var(--primary);
+            color: #fff;
+            border: 2px solid var(--primary);
+        }
+
+        .konika-btn-primary:hover {
+            background-color: transparent;
+            color: var(--primary);
+        }
+
+        /* Hero Section */
+        .course-hero {
+            background: linear-gradient(rgba(28, 53, 61, 0.7), rgba(28, 53, 61, 0.7)),
+                url('https://images.unsplash.com/photo-1584697964154-04e4f5d12e0b') center/cover no-repeat;
+            padding: 100px 20px;
+            color: white;
+            text-align: center;
+        }
+
+        .course-hero h1 {
+            font-size: 2.8rem;
+            font-weight: 700;
+        }
+
+        .course-hero p {
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: auto;
+        }
+
+        /* Course Content */
+        .course-content h3 {
+            color: var(--primary);
+            font-weight: 700;
+        }
+
+        .course-content ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .course-content ul li {
+            padding: 10px 0;
+            font-size: 1.05rem;
+        }
+
+        .course-content ul li i {
+            color: var(--primary);
+            margin-right: 8px;
+        }
+
+        .course-image {
+            border-radius: 10px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        /* FAQ Styles */
+        #faqAccordion .accordion-item {
+            border: none;
+            margin-bottom: 10px;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+        }
+
+        #faqAccordion .accordion-button {
+            background-color: white;
+            color: var(--secondary);
+            font-weight: 600;
+            font-size: 1.05rem;
+            padding: 15px 20px;
+            border: none;
+            box-shadow: none;
+            transition: all 0.3s ease;
+        }
+
+        #faqAccordion .accordion-button:not(.collapsed) {
+            background-color: var(--primary);
+            color: #fff;
+            box-shadow: none;
+        }
+
+        #faqAccordion .accordion-button:focus {
+            box-shadow: none;
+        }
+
+        #faqAccordion .accordion-button::after {
+            filter: brightness(0) saturate(100%) invert(36%) sepia(92%) saturate(2789%) hue-rotate(345deg) brightness(96%) contrast(90%);
+            transition: transform 0.3s ease;
+        }
+
+        #faqAccordion .accordion-button:not(.collapsed)::after {
+            filter: brightness(0) invert(1);
+            transform: rotate(180deg);
+        }
+
+        #faqAccordion .accordion-body {
+            background-color: #fff;
+            color: var(--secondary);
+            padding: 15px 20px;
+            font-size: 0.95rem;
+            line-height: 1.6;
+            border-top: 1px solid rgba(0, 0, 0, 0.05);
+        }
+
+
+        /* Modal Form */
+        .modal-header {
+            background: var(--primary);
+            color: white;
+            border-bottom: none;
+        }
+
+        .form-control:focus {
+            border-color: var(--primary);
+            box-shadow: 0 0 0 0.2rem rgba(236, 28, 36, 0.25);
+        }
+    </style>
+
+</head>
+
+<body>
+    <!-- Header -->
+    <!-- Header Top -->
+    <header class="topbar-header text-white">
+        <div class="container">
+            <div class="row align-items-center text-center text-md-start">
+                <!-- Left: Social Icons -->
+                <div class="col-12 col-md-4 d-flex justify-content-center justify-content-md-start gap-3">
+                    <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+                <!-- Center: Coaching Center Address -->
+                <div class="col-12 col-md-4 text-center">
+                    <span class="fw-bold text-white">Address</span><br>
+                    <small class="text-white">
+                        <i class="fas fa-map-marker-alt me-1"></i> Mymensingh Sadar, Bangladesh
+                    </small>
+                </div>
+                <!-- Right: Mobile Number -->
+                <div class="col-12 col-md-4 d-flex justify-content-center justify-content-md-end gap-2">
+                    <span><i class="fas fa-phone-alt me-1 text-success"></i> +880 1711-000000</span>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- Bottom Sticky Nav -->
+    <nav class="header-bottom sticky-top shadow-sm bg-white">
+        <div class="container d-flex align-items-center justify-content-between py-2">
+            <!-- Logo -->
+            <a href="index.html" class="navbar-brand d-flex align-items-center">
+                <img src="assets/images/konika.jfif" alt="Konika Coaching" height="40" class="me-2">
+            </a>
+            <!-- Hamburger for Mobile -->
+            <button class="btn d-md-none" id="menu-toggle">
+                <i class="fas fa-bars fs-5"></i>
+            </button>
+            <!-- Main Menu -->
+            <ul class="nav d-none d-md-flex mb-0 fw-semibold">
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link px-3">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="about.html" class="nav-link px-3">About Us</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle px-3" data-bs-toggle="dropdown">Courses</a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="courses.html">Academic Coaching</a></li>
+                        <li><a class="dropdown-item" href="courses.html">Career Guidance</a></li>
+                        <li><a class="dropdown-item" href="courses.html">Skill Development</a></li>
+                        <li><a class="dropdown-item" href="courses.html">Online Workshops</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a href="blog.html" class="nav-link px-3">Blog</a>
+                </li>
+                <li class="nav-item">
+                    <a href="gallery.html" class="nav-link px-3">Image Gallery</a>
+                </li>
+                <li class="nav-item">
+                    <a href="videoGallery.html" class="nav-link px-3">Video Gallery</a>
+                </li>
+                <li class="nav-item">
+                    <a href="contact.html" class="nav-link px-3">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <!-- Mobile Slide Menu -->
+    <div id="mobileMenu" class="mobile-menu">
+        <button id="closeMenu" class="btn-close btn-close-white ms-auto m-3"></button>
+        <ul class="list-unstyled ps-2 pt-4 pe-4">
+            <!-- Home -->
+            <li><a href="index.html">Home</a></li>
+            <!-- About Us -->
+            <li><a href="about.html">About Us</a></li>
+            <!-- Courses -->
+            <li>
+                <a href="#">Courses</a>
+                <ul class="submenu">
+                    <li><a href="courses.html">Academic Coaching</a></li>
+                    <li><a href="courses.html">Career Guidance</a></li>
+                    <li><a href="courses.html">Skill Development</a></li>
+                    <li><a href="courses.html">Online Workshops</a></li>
+                </ul>
+            </li>
+            <!-- Blog -->
+            <li><a href="blog.html">Blog</a></li>
+            <!-- Gallery -->
+            <li><a href="gallery.html">Image Gallery</a></li>
+            <!-- Video Gallery -->
+            <li><a href="videoGallery.html">Video Gallery</a></li>
+            <!-- Contact -->
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </div>
+    <!-- Main Content Start -->
+    <main>
+        <!-- Page Top Header -->
+        <section class="page-top-header text-center">
+            <div class="container">
+                <h1 class="display-4 fw-bold">Course Details</h1>
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb justify-content-center">
+                        <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">Course Details</li>
+                    </ol>
+                </nav>
+            </div>
+        </section>
+        <!-- Course Details -->
+        <section class="py-5">
+            <div class="container">
+                <div class="row g-5 align-items-center">
+                    <!-- Left Content -->
+                    <div class="col-lg-6" data-aos="fade-right">
+                        <div class="course-content">
+                            <h3>What You Will Learn</h3>
+                            <ul>
+                                <li><i class="fas fa-check-circle"></i> Personalized study plans tailored to your
+                                    strengths</li>
+                                <li><i class="fas fa-check-circle"></i> Advanced exam preparation techniques</li>
+                                <li><i class="fas fa-check-circle"></i> Time management & productivity skills</li>
+                                <li><i class="fas fa-check-circle"></i> Regular performance analysis & feedback</li>
+                            </ul>
+
+                            <h3 class="mt-4">Course Benefits</h3>
+                            <p>
+                                Our Academic Coaching program ensures students receive one-on-one attention from
+                                experienced mentors.
+                                Whether you are preparing for competitive exams or need help improving grades, we
+                                provide all the tools and
+                                strategies you need to succeed.
+                            </p>
+
+                            <button class="konika-btn konika-btn-primary mt-3" data-bs-toggle="modal"
+                                data-bs-target="#enrollModal">
+                                Enroll Now
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Right Image -->
+                    <div class="col-lg-6" data-aos="fade-left">
+                        <img src="https://images.unsplash.com/photo-1596495577886-d920f1fb7238"
+                            class="img-fluid course-image" alt="Academic Coaching">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Curriculum -->
+        <section class="py-5 bg-light">
+            <div class="container" data-aos="zoom-in">
+                <h3 class="fw-bold text-center mb-4" style="color: var(--primary);">Course Curriculum</h3>
+                <div class="row g-4">
+                    <div class="col-md-4">
+                        <div class="p-4 bg-white rounded shadow-sm h-100">
+                            <h5>Module 1: Fundamentals</h5>
+                            <p>Introduction, study habits, and foundational skills.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="p-4 bg-white rounded shadow-sm h-100">
+                            <h5>Module 2: Exam Techniques</h5>
+                            <p>Learn proven strategies to excel in exams efficiently.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="p-4 bg-white rounded shadow-sm h-100">
+                            <h5>Module 3: Career Planning</h5>
+                            <p>Guidance on academic pathways and professional growth.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ -->
+        <section class="py-5">
+            <div class="container" data-aos="fade-up">
+                <h3 class="fw-bold text-center mb-4" style="color: var(--primary);">Frequently Asked Questions</h3>
+                <div class="accordion" id="faqAccordion">
+
+                    <!-- FAQ 1 -->
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#faq1">
+                                Who is this course for?
+                            </button>
+                        </h2>
+                        <div id="faq1" class="accordion-collapse collapse show">
+                            <div class="accordion-body">
+                                This course is for students preparing for competitive exams, school exams, and anyone
+                                wanting to improve academically.
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- FAQ 2 -->
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#faq2">
+                                How long is the course?
+                            </button>
+                        </h2>
+                        <div id="faq2" class="accordion-collapse collapse">
+                            <div class="accordion-body">
+                                The course duration is 3 months, with flexible schedules available to fit your learning
+                                pace.
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- FAQ 3 -->
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#faq3">
+                                What is the mode of teaching?
+                            </button>
+                        </h2>
+                        <div id="faq3" class="accordion-collapse collapse">
+                            <div class="accordion-body">
+                                We offer both online and offline classes with interactive lessons, live Q&A sessions,
+                                and personalized mentoring.
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- FAQ 4 -->
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#faq4">
+                                Are there any prerequisites?
+                            </button>
+                        </h2>
+                        <div id="faq4" class="accordion-collapse collapse">
+                            <div class="accordion-body">
+                                No prior experience is required. A willingness to learn and stay committed is all you
+                                need.
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- FAQ 5 -->
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#faq5">
+                                Will I get study materials?
+                            </button>
+                        </h2>
+                        <div id="faq5" class="accordion-collapse collapse">
+                            <div class="accordion-body">
+                                Yes, we provide comprehensive study materials, practice tests, and recorded lectures for
+                                your revision.
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- FAQ 6 -->
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#faq6">
+                                How do I enroll?
+                            </button>
+                        </h2>
+                        <div id="faq6" class="accordion-collapse collapse">
+                            <div class="accordion-body">
+                                You can enroll directly on our website by clicking the “Enroll Now” button and filling
+                                out the registration form.
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Modal Enroll Form -->
+        <div class="modal fade" id="enrollModal" tabindex="-1">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Enroll in Academic Coaching</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                    </div>
+                    <div class="modal-body">
+                        <form>
+                            <div class="mb-3">
+                                <label class="form-label">Full Name</label>
+                                <input type="text" class="form-control" placeholder="Your Name">
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label">Email Address</label>
+                                <input type="email" class="form-control" placeholder="you@example.com">
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label">Phone Number</label>
+                                <input type="text" class="form-control" placeholder="Your Phone">
+                            </div>
+                            <button type="submit" class="konika-btn konika-btn-primary w-100">Submit Enrollment</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+    </main>
+    <!-- Main Content End -->
+    <!-- Footer Section -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row text-md-start">
+                <!-- Column 1: Logo & Social -->
+                <div class="col-md-3 mb-4">
+                    <div class="footer-logo">
+                        <a href="index.html" class="text-white">
+                            <a href="index.html" class="navbar-brand d-flex align-items-center">
+                                <img src="assets/images/konika.jfif" alt="Konika Coaching" height="80" class="me-2">
+                            </a>
+                            <!-- Konika <span>Cadet Academy</span></a> -->
+                    </div>
+                    <p class="mt-2" style="font-size: 14px; color: #bbb;">
+                        Empowering students with knowledge, skills, and confidence since 2005.
+                    </p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <!-- Column 2: Useful Links -->
+                <div class="col-md-2 mb-4">
+                    <h5>Useful Links</h5>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="admission.html">Admission Info</a></li>
+                        <li><a href="gallery.html">Photo Gallery</a></li>
+                        <li><a href="testimonials.html">Testimonials</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <!-- Column 3: Academic Resources -->
+                <div class="col-md-2 mb-4">
+                    <h5>Academics</h5>
+                    <ul>
+                        <li><a href="courses.html">Our Courses</a></li>
+                        <li><a href="schedule.html">Class Schedule</a></li>
+                        <li><a href="results.html">Exam Results</a></li>
+                        <li><a href="events.html">Events & Seminars</a></li>
+                        <li><a href="faqs.html">FAQs</a></li>
+                    </ul>
+                </div>
+                <!-- Column 4: Newsletter -->
+                <div class="col-md-2 mb-4">
+                    <h5>Join Our Newsletter</h5>
+                    <form class="newsletter">
+                        <input type="email" placeholder="Your email address" required>
+                        <button type="submit">Subscribe</button>
+                    </form>
+                </div>
+                <!-- Column 3: Academic Resources -->
+                <div class="col-md-3 mb-4">
+                    <h5>Contact Info</h5>
+                    <ul>
+                        <li><i class="fas fa-map-marker-alt me-2"></i> Mymensingh Sadar, Bangladesh</li>
+                        <li><i class="fas fa-phone me-2"></i> +880 1234-567890</li>
+                        <li><i class="fas fa-envelope me-2"></i> info@konikacoaching.com</li>
+                    </ul>
+                </div>
+            </div>
+            <!-- Footer Bottom -->
+            <div class="footer-bottom">
+                &copy; 2025 Konika Cadet Academy. All Rights Reserved | Designed with ❤️ for Students
+            </div>
+        </div>
+    </footer>
+    <!-- Footer End -->
+    <!-- Bootstrap JS (with Popper) -->
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <!-- Font Awesome -->
+    <script src="assets/js/all.min.js"></script>
+    <!-- Custom JS -->
+    <script src="assets/js/script.js"></script>
+    <!-- Responsive Menu JS -->
+    <script src="assets/js/responsiveMenu.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+    <script>
+        AOS.init();
+    </script>
+    <script> new WOW().init(); </script>
+
+    <script>
+        document.querySelectorAll(".faq-question").forEach(button => {
+            button.addEventListener("click", () => {
+                const faqItem = button.parentElement;
+                faqItem.classList.toggle("active");
+            });
+        });
+
+    </script>
+
+
+</body>
+
+</html>

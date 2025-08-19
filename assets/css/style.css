@@ -188,6 +188,9 @@ ul li {
   color: #333;
   font-weight: 500;
 }
+.header-bottom .nav-link.active {
+  color: var(--primary) !important;
+}
 .header-bottom .nav-link:hover,
 .header-bottom .dropdown-item:hover {
   color: var(--primary);
